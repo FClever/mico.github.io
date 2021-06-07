@@ -1289,7 +1289,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff3475;
+  background: #9fffff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2874,7 +2874,7 @@ body {
   color: #000;
 }
 .post-button .btn {
-  color: #555 !important;
+/** color: #555 !important;
   background-color: #fff;
   border-radius: 3px;
   font-size: 15px;
@@ -2882,16 +2882,8 @@ body {
   border: none !important;
   transition-property: unset;
   padding: 0 15px;
+  **/
   border-radius: 30px 30px 30px 30px;
-}
-.post-button .btn:hover {
-  border-color: #6f42c1;
-  color: #fff;
-  background: #e431d3;
-  background-image: linear-gradient(90deg, #a166ab 0, #ef4e7b 25%, #f37055 50%, #ef4e7b 75%, #a166ab 100%);
-}
-.posts-expand .post-title-link::before {
-  background-image: linear-gradient(90deg, #a166ab 0, #ef4e7b 25%, #f37055 50%, #ef4e7b 75%, #a166ab 100%);
 }
 /*-------------------------------------------------------分类&&标签&&归档页面--------------------------------------------------*/
 .post-block.page {
