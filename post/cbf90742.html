@@ -23,15 +23,20 @@
     var CONFIG = {"hostname":"github.tmico.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="MICO">
-<meta property="og:url" content="https://github.tmico.cn/archives/index.html">
+  <meta name="description" content="数组属性      属性   描述     constructor   返回对创建此对象的数组函数的引用。     length   设置或返回数组中元素的数目。     prototype   使您有能力向对象添加属性和方法。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js数组操作(创建、添加、替换、删除、清空等)">
+<meta property="og:url" content="https://github.tmico.cn/post/cbf90742.html">
 <meta property="og:site_name" content="MICO">
+<meta property="og:description" content="数组属性      属性   描述     constructor   返回对创建此对象的数组函数的引用。     length   设置或返回数组中元素的数目。     prototype   使您有能力向对象添加属性和方法。">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-06-07T10:53:00.000Z">
+<meta property="article:modified_time" content="2021-06-07T10:54:43.509Z">
 <meta property="article:author" content="mico">
+<meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://github.tmico.cn/archives/">
+<link rel="canonical" href="https://github.tmico.cn/post/cbf90742.html">
 
 
 <script id="page-configurations">
@@ -39,12 +44,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>归档 | MICO</title>
+  <title>js数组操作(创建、添加、替换、删除、清空等) | MICO</title>
   
 
 
@@ -189,230 +194,263 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 10 篇日志。 继续努力。</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.tmico.cn/post/cbf90742.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="mico">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MICO">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          js数组操作(创建、添加、替换、删除、清空等)
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-06-07 18:53:00" itemprop="dateCreated datePublished" datetime="2021-06-07T18:53:00+08:00">2021-06-07</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.8k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
+        <h2>数组属性</h2>
+<div class="table-wrapper">
+<table style="height: 180px;" border="0" width="402" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td valign="top" width="21%">
+<p align="left">属性</p>
+</td>
+<td valign="top" width="78%">
+<p align="left">描述</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="21%">
+<p align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/jsref/jsref_constructor_array.asp">constructor</a></p>
+</td>
+<td valign="top" width="78%">
+<p align="left">返回对创建此对象的数组函数的引用。</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="21%">
+<p align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/jsref/jsref_length_array.asp">length</a></p>
+</td>
+<td valign="top" width="78%">
+<p align="left">设置或返回数组中元素的数目。</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="21%">
+<p align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/jsref/jsref_prototype_array.asp">prototype</a></p>
+</td>
+<td valign="top" width="78%">
+<p align="left">使您有能力向对象添加属性和方法。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<span id="more"></span>
+<h2><strong>一、创建数组并给数组元素赋值</strong></h2>
+<strong>1.常规方式</strong>
+<pre class="lang:js decode:true">var myCars = new Array();
+myCars[0] = "Saab";
+myCars[1] = "Volvo";
+myCars[2] = "BMW";</pre>
+<strong>2.简洁方式-直接实例化</strong>
+<pre class="lang:default decode:true ">var myCars = new Array("Saab","Volvo","BMW");</pre>
+<strong>3.字面-隐式创建</strong>
+<pre class="lang:default decode:true ">var myCars = ["Saab","Volvo","BMW"];</pre>
+<h2><strong>二、清空数组元素</strong></h2>
+<pre class="lang:default decode:true">var ary = [1,2,3,4]; 
+ary.splice(0,ary.length);//清空数组 
+console.log(ary); // 输出 []，空数组，即被清空了</pre>
+<h2><strong>三、删除数组元素</strong></h2>
+<strong>1.length属性</strong>
+
+<p>JavaScript中Array的length属性非常有特点一一它不是只读的。因此，可以通过设置这个属性来达到从数组的末尾移除项或添加新项的目的。</p>
+<div class="cnblogs_code">
+<pre class="">var colors = ["red", "blue", "grey"]; // 创建一个包含3个字符串的数组
+colors.length = 2;
+
+<p>console.log(colors[2]); // undefined</pre></p>
+</div>
+<strong>2.delete方法</strong>
+
+<p>JavaScript提供了一个delete关键字用来删除（清除）数组元素。</p>
+<p>要注意的是，使用delete删除元素之后数组长度不变，只是被删除元素被置为undefined了。</p>
+<pre class="lang:default decode:true ">var colors = ["red", "blue", "grey", "green"];
+delete colors[0];
+
+console.log(colors); // [undefined, "blue", "grey", "green"]</pre>
+<p class=""><strong>3.pop()栈方法</strong></p>
+JavaScript中的Array对象提供了一个pop()栈方法用于弹出并返回数组中的最后一项，某种程度上可以当做删除用。
+
+<p>栈数据结构的访问规则是FILO（First In Last Out，先进后出），栈操作在栈顶添加项，从栈顶移除项，使用pop()方法，它能移除数组中的最后一项并返回该项，并且数组的长度减1。</p>
+<pre class="">var colors = ["red", "blue", "grey"];
+var color = colors.pop();
+
+console.log(color); // "grey"
+console.log(colors.length); // 2</pre>
+<p>可以看出，在调用pop()方法时，数组返回最后一项，即”grey”，数组的元素也仅剩两项。</p>
+<p><strong>4.shift()队列方法</strong></p>
+<p>JavaScript中的Array对象提供了一个shift()队列方法用于弹出并返回数组中的第一项，某种程度上也可以当做删除用。</p>
+<p>队列数据结构的访问规则是FIFO（First In First Out，先进先出），队列在列表的末端添加项，从列表的前端移除项，使用shift()方法，它能够移除数组中的第一个项并返回该项，并且数组的长度减1。</p>
+<pre class="">var colors = ["red", "blue", "grey"];
+var color = colors.shift();
+
+console.log(color); // "red"
+console.log(colors.length); // 2</pre>
+<p>可以看出，在调用shift()方法时，数组返回第一项，即”red”，数组的元素也仅剩两项。</p>
+<p><strong>5.splice()操作方法 </strong></p>
+<p>在JavaScript的Array对象中提供了一个splice()方法用于对数组进行特定的操作。splice()恐怕要算最强大的数组方法了，他的用法有很多种，在此只介绍删除数组元素的方法。在删除数组元素的时候，它可以删除任意数量的项，只需要指定2个参数：要删除的第一项的位置和要删除的项数。</p>
+<div class="cnblogs_code">
+<pre>var colors = ["red", "blue", "grey"];
+var color = colors.splice(0, 1);
+
+<p>console.log(color); // “red”<br>console.log(colors); // [“blue”, “grey”]</pre></p>
+</div>
+可以看出，在调用了splice(0, 1)方法时，数组从第一项开始，删除了一项。
+
+<p><strong>6.迭代方法</strong></p>
+<p>所谓的迭代方法就是用循环迭代数组元素，发现符合要删除的项则删除。用的最多的地方，可能是当数组中的元素为对象的时候，可以根据对象的某个属性（例如ID）来删除数组元素。</p>
+<p>第一种用最常见的ForEach循环来对比元素找到之后将其删除。</p>
+<div class="cnblogs_code">
+<pre class="">var colors = ["red", "blue", "grey"];
+
+<p>colors.forEach(function(item, index, arr) {<br>    if(item === “red”) {<br>        arr.splice(index, 1);<br>    }<br>});</pre></p>
+</div>
+可以看到这里还要配合splice()方法去实现删除，循环只是为了找到特定的元素。另外一种思路是循环将不需要删除的元素推入到新的数组中，也能达到假性删除特定元素的目的。
+
+<p>第二种我们用循环中的filter方法。</p>
+<div class="cnblogs_code">
+<pre class="">var colors = ["red", "blue", "grey"];
+
+<p>colors = colors.filter(function(item) {<br>    return item != “red”<br>});</p>
+<p>console.log(colors); // [“blue”, “grey”]</pre></p>
+</div>
+代码很简单，找出元素不是red的项数返回给colors（其实是得到了一个新的数组，并不是在原数组上进行删除操作），一定程度上也算是达到了删除特定元素的目的。
+
+<p><strong>7.prototype原型方法</strong></p>
+<p>可以通过在Array的原型上添加方法来达到删除的目的。</p>
+<div class="cnblogs_code">
+<pre class="">Array.prototype.remove = function(dx) {
+　　if(isNaN(dx) || dx &gt; this.length){
+　　　　return false;
+　　}
+
+<p>　　for(var i = 0, n = 0; i &lt; this.length; i++) {<br>　　　　if(this[i] != this[dx]) {<br>　　　　　　this[n++] = this[i];<br>　　　　}<br>　　}<br>　　this.length -= 1;<br>};</p>
+<p>var colors = [“red”, “blue”, “grey”];<br>colors.remove(1);</p>
+<p>console.log(colors); // [“red”, “grey”]</pre></p>
+</div>
+这种方法其实就是自己实现一个删除的逻辑，然后把删除方法添加给了Array的原型对象，则在此环境中的所有Array对象都可以使用该方法。尽管可以这么做，但是不推荐在产品化的程序中修改原生对象的原型。道理很简单，如果只是某个实现中缺少某个方法，就在原生对象的原型中添加这个方法，那么当在另一个支持该方法的实现中运行代码时，就可能导致命名冲突。而且这样做可能会意外地导致原生方法被重写。
+<h1></h1>
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
+        
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-06-07T18:59:00+08:00"
-              content="2021-06-07">
-          06-07
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/post/f4d8dc94.html" itemprop="url">
-            <span itemprop="name">ifconfig命令安装</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-06-07T18:56:00+08:00"
-              content="2021-06-07">
-          06-07
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/post/4368037d.html" itemprop="url">
-            <span itemprop="name">鼠标箭头变为手型，移出后再变为原型</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-06-07T18:53:00+08:00"
-              content="2021-06-07">
-          06-07
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/post/cbf90742.html" itemprop="url">
-            <span itemprop="name">js数组操作(创建、添加、替换、删除、清空等)</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-06-07T18:50:00+08:00"
-              content="2021-06-07">
-          06-07
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/post/5748c66c.html" itemprop="url">
-            <span itemprop="name">js如何往数组Array中添加删除元素</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-06-07T18:48:00+08:00"
-              content="2021-06-07">
-          06-07
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/post/cc41aa37.html" itemprop="url">
-            <span itemprop="name">mac连接mysql出现Access denied for user 'root'@'localhost' (using password: YES)</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-06-07T18:45:00+08:00"
-              content="2021-06-07">
-          06-07
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/post/d490159b.html" itemprop="url">
-            <span itemprop="name">MySQL允许root远程登录</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-06-07T17:32:00+08:00"
-              content="2021-06-07">
-          06-07
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/post/f475a90b.html" itemprop="url">
-            <span itemprop="name">移除JSON对象中的某个属性</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-06-07T17:22:00+08:00"
-              content="2021-06-07">
-          06-07
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/post/b08df4b3.html" itemprop="url">
-            <span itemprop="name">安装并配置PHP</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-06-07T16:25:00+08:00"
-              content="2021-06-07">
-          06-07
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/post/45548175.html" itemprop="url">
-            <span itemprop="name">js得到今天日期、本周、本月、本季度、本年起始和结束日期</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-06-07T16:15:00+08:00"
-              content="2021-06-07">
-          06-07
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/post/a1fb3e72.html" itemprop="url">
-            <span itemprop="name">Centos7安装docker</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>mico
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://github.tmico.cn/post/cbf90742.html" title="js数组操作(创建、添加、替换、删除、清空等)">https://github.tmico.cn/post/cbf90742.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
 
 
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/post/5748c66c.html" rel="prev" title="js如何往数组Array中添加删除元素">
+      <i class="fa fa-chevron-left"></i> js如何往数组Array中添加删除元素
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/post/4368037d.html" rel="next" title="鼠标箭头变为手型，移出后再变为原型">
+      鼠标箭头变为手型，移出后再变为原型 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
-  </div>
+      </footer>
+    
+  </article>
   
   
-  
-
   
 
 
@@ -465,6 +503,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">数组属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">一、创建数组并给数组元素赋值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">二、清空数组元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">三、删除数组元素</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number"></span> <span class="nav-text"></span></a></div>
       </div>
       <!--/noindex-->
 
