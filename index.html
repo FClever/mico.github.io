@@ -125,7 +125,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">10</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">13</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -135,7 +135,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">15</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">16</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -195,7 +195,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://github.tmico.cn/post/a01b8af8.html">
+    <link itemprop="mainEntityOfPage" href="https://github.tmico.cn/post/24c94d92.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -209,14 +209,10 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/post/a01b8af8.html" class="post-title-link" itemprop="url">Windows安装Redis</a>
+            <a href="/post/24c94d92.html" class="post-title-link" itemprop="url">Docker安装Redis</a>
         </h2>
 
         <div class="post-meta">
-          
-            <i class="fa fa-thumb-tack"></i>
-            <font color=7D26CD>置顶</font>
-            <span class="post-meta-divider">|</span>
           
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -224,7 +220,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-06-08 14:48:00" itemprop="dateCreated datePublished" datetime="2021-06-08T14:48:00+08:00">2021-06-08</time>
+              <time title="创建时间：2021-06-09 15:53:08" itemprop="dateCreated datePublished" datetime="2021-06-09T15:53:08+08:00">2021-06-09</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -242,7 +238,96 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>202</span>
+              <span>3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="Docker-安装-Redis"><a href="#Docker-安装-Redis" class="headerlink" title="Docker 安装 Redis"></a>Docker 安装 Redis</h2><h3 id="查看可用的-Redis-版本"><a href="#查看可用的-Redis-版本" class="headerlink" title="查看可用的 Redis 版本"></a>查看可用的 Redis 版本</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">[root@VM-4-9-centos ~]# docker search redis</span><br><span class="line">INDEX       NAME                                       DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED</span><br><span class="line">docker.io   docker.io/redis                            Redis is an open source key-value store th...   9554      [OK]</span><br><span class="line">docker.io   docker.io/bitnami/redis                    Bitnami Redis Docker Image                      185                  [OK]</span><br><span class="line">docker.io   docker.io/sameersbn/redis                                                                  83                   [OK]</span><br><span class="line">docker.io   docker.io/grokzen/redis-cluster            Redis cluster 3.0, 3.2, 4.0, 5.0, 6.0, 6.2      78</span><br><span class="line">docker.io   docker.io/rediscommander/redis-commander   Alpine image for redis-commander - Redis m...   60                   [OK]</span><br><span class="line">docker.io   docker.io/redislabs/redisearch             Redis With the RedisSearch module pre-load...   34</span><br><span class="line">docker.io   docker.io/redislabs/redis                  Clustered in-memory database engine compat...   30</span><br><span class="line">docker.io   docker.io/redislabs/redisinsight           RedisInsight - The GUI for Redis                30</span><br><span class="line">docker.io   docker.io/oliver006/redis_exporter          Prometheus Exporter for Redis Metrics. Su...   26</span><br><span class="line">docker.io   docker.io/arm32v7/redis                    Redis is an open source key-value store th...   24</span><br><span class="line">docker.io   docker.io/bitnami/redis-sentinel           Bitnami Docker Image for Redis Sentinel         23                   [OK]</span><br><span class="line">docker.io   docker.io/redislabs/rejson                 RedisJSON - Enhanced JSON data type proces...   23</span><br><span class="line">docker.io   docker.io/redislabs/redisgraph             A graph database module for Redis               15                   [OK]</span><br><span class="line">docker.io   docker.io/redislabs/redismod               An automated build of redismod - latest Re...   13                   [OK]</span><br><span class="line">docker.io   docker.io/arm64v8/redis                    Redis is an open source key-value store th...   12</span><br><span class="line">docker.io   docker.io/webhippie/redis                  Docker images for Redis                         11                   [OK]</span><br><span class="line">docker.io   docker.io/insready/redis-stat              Docker image for the real-time Redis monit...   10                   [OK]</span><br><span class="line">docker.io   docker.io/s7anley/redis-sentinel-docker    Redis Sentinel                                  10                   [OK]</span><br><span class="line">docker.io   docker.io/goodsmileduck/redis-cli          redis-cli on alpine                             9                    [OK]</span><br><span class="line">docker.io   docker.io/circleci/redis                   CircleCI images for Redis                       7                    [OK]</span><br><span class="line">docker.io   docker.io/centos/redis-32-centos7          Redis in-memory data structure store, used...   5</span><br><span class="line">docker.io   docker.io/clearlinux/redis                 Redis key-value data structure server with...   3</span><br><span class="line">docker.io   docker.io/tiredofit/redis                  Redis Server w/ Zabbix monitoring and S6 O...   1                    [OK]</span><br><span class="line">docker.io   docker.io/wodby/redis                      Redis container image with orchestration        1                    [OK]</span><br><span class="line">docker.io   docker.io/xetamus/redis-resource           forked redis-resource                           0                    [OK]</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/post/24c94d92.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.tmico.cn/post/703640c2.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="mico">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MICO">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/post/703640c2.html" class="post-title-link" itemprop="url">Linux源码安装Redis</a>
+        </h2>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-06-09 13:55:26" itemprop="dateCreated datePublished" datetime="2021-06-09T13:55:26+08:00">2021-06-09</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Redis/" itemprop="url" rel="index"><span itemprop="name">Redis</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>302</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -261,12 +346,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="Windows-下安装"><a href="#Windows-下安装" class="headerlink" title="Windows 下安装"></a>Windows 下安装</h2><p><strong>下载地址：</strong><a target="_blank" rel="noopener" href="https://github.com/tporadowski/redis/releases">https://github.com/tporadowski/redis/releases</a></p>
-<p>Redis 支持 32 位和 64 位。这个需要根据你系统平台的实际情况选择，这里我们下载 <strong>Redis-x64-xxx.zip</strong>压缩包并解压。</p>
-<img data-src="/post/a01b8af8/1.png" class>
+          <h2 id="Linux源码安装Redis"><a href="#Linux源码安装Redis" class="headerlink" title="Linux源码安装Redis"></a>Linux源码安装Redis</h2><h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><p><a target="_blank" rel="noopener" href="http://redis.io/download">http://redis.io/download</a></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>下载、解压和编译Redis：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ wget https://download.redis.io/releases/redis-6.2.4.tar.gz</span><br><span class="line">$ tar xzf redis-6.2.4.tar.gz</span><br><span class="line">$ cd redis-6.2.4</span><br><span class="line">$ make</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/post/a01b8af8.html#more" rel="contents">
+              <a class="btn" href="/post/703640c2.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -378,7 +463,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://github.tmico.cn/post/c9f6f059.html">
+    <link itemprop="mainEntityOfPage" href="https://github.tmico.cn/post/a01b8af8.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -392,7 +477,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/post/c9f6f059.html" class="post-title-link" itemprop="url">Redis安装</a>
+            <a href="/post/a01b8af8.html" class="post-title-link" itemprop="url">Windows安装Redis</a>
         </h2>
 
         <div class="post-meta">
@@ -403,7 +488,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-06-08 09:26:00" itemprop="dateCreated datePublished" datetime="2021-06-08T09:26:00+08:00">2021-06-08</time>
+              <time title="创建时间：2021-06-08 14:48:00" itemprop="dateCreated datePublished" datetime="2021-06-08T14:48:00+08:00">2021-06-08</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -421,7 +506,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>150</span>
+              <span>315</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -440,10 +525,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Redis-安装"><a href="#Redis-安装" class="headerlink" title="Redis 安装"></a>Redis 安装</h1><h2 id="Windows-下安装"><a href="#Windows-下安装" class="headerlink" title="Windows 下安装"></a>Windows 下安装</h2><p><strong>下载地址：</strong><a target="_blank" rel="noopener" href="https://github.com/tporadowski/redis/releases">https://github.com/tporadowski/redis/releases</a></p>
-<p>Redis 支持 32 位和 64 位。这个需要根据你系统平台的实际情况选择，这里我们下载 <strong>Redis-x64-xxx.zip</strong>压缩包到 C 盘，解压后，将文件夹重新命名为 <strong>redis</strong>。</p>
-<p><img data-src="./c9f6f059/image-20210608094756575.png"></p>
-
+          <h2 id="Windows-下安装"><a href="#Windows-下安装" class="headerlink" title="Windows 下安装"></a>Windows 下安装</h2><h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><p><a target="_blank" rel="noopener" href="https://github.com/tporadowski/redis/releases">https://github.com/tporadowski/redis/releases</a></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>Redis 支持 32 位和 64 位。这个需要根据你系统平台的实际情况选择，这里我们下载 <strong>Redis-x64-5.0.10.zip</strong>压缩包并解压。</p>
+<img data-src="/post/a01b8af8/1.png" class>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/post/a01b8af8.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1031,98 +1123,6 @@ yum install net-tools.x86_64</pre></div>
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://github.tmico.cn/post/cc41aa37.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="mico">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="MICO">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/post/cc41aa37.html" class="post-title-link" itemprop="url">mac连接mysql出现Access denied for user 'root'@'localhost' (using password: YES)</a>
-        </h2>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-06-07 18:48:00" itemprop="dateCreated datePublished" datetime="2021-06-07T18:48:00+08:00">2021-06-07</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a>
-                </span>
-            </span>
-
-          
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>266</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>处理方法：<br><strong>1.关闭mysql的服务，点击最左上的苹果图标在系统偏好设置中，找到mysql，点击，stop</strong></p>
-<p><strong>2.进入终端</strong></p>
-<p>进入mysql目录</p>
-<pre class>cd /usr/local/mysql/bin/</pre>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/post/cc41aa37.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1196,7 +1196,7 @@ yum install net-tools.x86_64</pre></div>
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1209,7 +1209,7 @@ yum install net-tools.x86_64</pre></div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -1264,13 +1264,13 @@ yum install net-tools.x86_64</pre></div>
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">17k</span>
+    <span title="站点总字数">20k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">15 分钟</span>
+    <span title="站点阅读时长">18 分钟</span>
 </div>
 
 <!--

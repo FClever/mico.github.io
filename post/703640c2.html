@@ -23,21 +23,23 @@
     var CONFIG = {"hostname":"github.tmico.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="版本hexo: 5.4.0 解决方案如下： 　　1. 在根目录下配置文件_config.yml 中有 post_asset_folder:false改为true。这样在建立文件时，Hexo会自动建立一个与文章同名的文件夹，这样就可以把与该文章相关的所有资源（图片）都放到那个文件夹里方便后面引用。如这里我放了一张test.jpg的图片。 　　2. git bash安装插件：npm install h">
+  <meta name="description" content="Linux源码安装Redis下载地址http:&#x2F;&#x2F;redis.io&#x2F;download 安装下载、解压和编译Redis： 1234$ wget https:&#x2F;&#x2F;download.redis.io&#x2F;releases&#x2F;redis-6.2.4.tar.gz$ tar xzf redis-6.2.4.tar.gz$ cd redis-6.2.4$ make">
 <meta property="og:type" content="article">
-<meta property="og:title" content="解决Hexo图片无法显示问题">
-<meta property="og:url" content="https://github.tmico.cn/post/57d980c.html">
+<meta property="og:title" content="Linux源码安装Redis">
+<meta property="og:url" content="https://github.tmico.cn/post/703640c2.html">
 <meta property="og:site_name" content="MICO">
-<meta property="og:description" content="版本hexo: 5.4.0 解决方案如下： 　　1. 在根目录下配置文件_config.yml 中有 post_asset_folder:false改为true。这样在建立文件时，Hexo会自动建立一个与文章同名的文件夹，这样就可以把与该文章相关的所有资源（图片）都放到那个文件夹里方便后面引用。如这里我放了一张test.jpg的图片。 　　2. git bash安装插件：npm install h">
+<meta property="og:description" content="Linux源码安装Redis下载地址http:&#x2F;&#x2F;redis.io&#x2F;download 安装下载、解压和编译Redis： 1234$ wget https:&#x2F;&#x2F;download.redis.io&#x2F;releases&#x2F;redis-6.2.4.tar.gz$ tar xzf redis-6.2.4.tar.gz$ cd redis-6.2.4$ make">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-06-09T03:49:00.000Z">
-<meta property="article:modified_time" content="2021-06-09T03:50:47.003Z">
+<meta property="article:published_time" content="2021-06-09T05:55:26.000Z">
+<meta property="article:modified_time" content="2021-06-09T08:05:20.500Z">
 <meta property="article:author" content="mico">
-<meta property="article:tag" content="hexo">
-<meta property="article:tag" content="图片">
+<meta property="article:tag" content="安装">
+<meta property="article:tag" content="单机">
+<meta property="article:tag" content="Liunx">
+<meta property="article:tag" content="Centos">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://github.tmico.cn/post/57d980c.html">
+<link rel="canonical" href="https://github.tmico.cn/post/703640c2.html">
 
 
 <script id="page-configurations">
@@ -50,7 +52,7 @@
   };
 </script>
 
-  <title>解决Hexo图片无法显示问题 | MICO</title>
+  <title>Linux源码安装Redis | MICO</title>
   
 
 
@@ -202,7 +204,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://github.tmico.cn/post/57d980c.html">
+    <link itemprop="mainEntityOfPage" href="https://github.tmico.cn/post/703640c2.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -215,7 +217,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          解决Hexo图片无法显示问题
+          Linux源码安装Redis
         </h1>
 
         <div class="post-meta">
@@ -226,7 +228,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-06-09 11:49:00" itemprop="dateCreated datePublished" datetime="2021-06-09T11:49:00+08:00">2021-06-09</time>
+              <time title="创建时间：2021-06-09 13:55:26" itemprop="dateCreated datePublished" datetime="2021-06-09T13:55:26+08:00">2021-06-09</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -234,7 +236,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
+                  <a href="/categories/Redis/" itemprop="url" rel="index"><span itemprop="name">Redis</span></a>
                 </span>
             </span>
 
@@ -251,7 +253,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>425</span>
+              <span>302</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -270,13 +272,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>版本hexo: 5.4.0</p>
-<p>解决方案如下：</p>
-<p>　　1. 在根目录下配置文件<code>_config.yml</code> 中有 <code>post_asset_folder:false改为true</code>。这样在建立文件时，<code>Hexo</code>会自动建立一个与文章同名的文件夹，这样就可以把与该文章相关的所有资源（图片）都放到那个文件夹里方便后面引用。如这里我放了一张test.jpg的图片。</p>
-<p>　　2. git bash安装插件：npm install <a target="_blank" rel="noopener" href="https://github.com/7ym0n/hexo-asset-image">https://github.com/7ym0n/hexo-asset-image</a> –save（这是个修改过的插件，经测试无问题），使用这个插件来引入图片，而不是网上那些方法里说的用传统md语法相对路径的方法。</p>
-<p>　　3. 插入图片时用这种方式：****</p>
-<p>　　　　　<strong>其中test.jpg就是你要引用的图片，我这里就是test.jpg，后面的This is an test image是图片描述，可以自己修改。</strong></p>
-<p>　　4. 这样就能成功显示了，测试下吧：hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</p>
+        <h2 id="Linux源码安装Redis"><a href="#Linux源码安装Redis" class="headerlink" title="Linux源码安装Redis"></a>Linux源码安装Redis</h2><h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><p><a target="_blank" rel="noopener" href="http://redis.io/download">http://redis.io/download</a></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>下载、解压和编译Redis：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ wget https://download.redis.io/releases/redis-6.2.4.tar.gz</span><br><span class="line">$ tar xzf redis-6.2.4.tar.gz</span><br><span class="line">$ cd redis-6.2.4</span><br><span class="line">$ make</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>现在编译的二进制文件在<code>src</code> 目录中可用 。运行Redis：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ src/redis-server</span><br></pre></td></tr></table></figure>
+
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>您可以使用内置客户端与 Redis 交互：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ src/redis-cli</span><br><span class="line">redis&gt; set foo bar</span><br><span class="line">OK</span><br><span class="line">redis&gt; get foo</span><br><span class="line">&quot;bar&quot;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -292,7 +298,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://github.tmico.cn/post/57d980c.html" title="解决Hexo图片无法显示问题">https://github.tmico.cn/post/57d980c.html</a>
+    <a href="https://github.tmico.cn/post/703640c2.html" title="Linux源码安装Redis">https://github.tmico.cn/post/703640c2.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -304,8 +310,10 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
-              <a href="/tags/%E5%9B%BE%E7%89%87/" rel="tag"><i class="fa fa-tag"></i> 图片</a>
+              <a href="/tags/%E5%AE%89%E8%A3%85/" rel="tag"><i class="fa fa-tag"></i> 安装</a>
+              <a href="/tags/%E5%8D%95%E6%9C%BA/" rel="tag"><i class="fa fa-tag"></i> 单机</a>
+              <a href="/tags/Liunx/" rel="tag"><i class="fa fa-tag"></i> Liunx</a>
+              <a href="/tags/Centos/" rel="tag"><i class="fa fa-tag"></i> Centos</a>
           </div>
 
         
@@ -314,12 +322,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/post/a01b8af8.html" rel="prev" title="Windows安装Redis">
-      <i class="fa fa-chevron-left"></i> Windows安装Redis
+    <a href="/post/57d980c.html" rel="prev" title="解决Hexo图片无法显示问题">
+      <i class="fa fa-chevron-left"></i> 解决Hexo图片无法显示问题
     </a></div>
       <div class="post-nav-item">
-    <a href="/post/703640c2.html" rel="next" title="Linux源码安装Redis">
-      Linux源码安装Redis <i class="fa fa-chevron-right"></i>
+    <a href="/post/24c94d92.html" rel="next" title="Docker安装Redis">
+      Docker安装Redis <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -379,6 +387,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85Redis"><span class="nav-number">1.</span> <span class="nav-text">Linux源码安装Redis</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80"><span class="nav-number">1.1.</span> <span class="nav-text">下载地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">1.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C"><span class="nav-number">1.3.</span> <span class="nav-text">运行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95"><span class="nav-number">1.4.</span> <span class="nav-text">测试</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

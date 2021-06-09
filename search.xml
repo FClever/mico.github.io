@@ -4,6 +4,66 @@
   
     
     <entry>
+      <title>Docker安装Redis</title>
+      <link href="/post/24c94d92.html"/>
+      <url>/post/24c94d92.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Docker-安装-Redis"><a href="#Docker-安装-Redis" class="headerlink" title="Docker 安装 Redis"></a>Docker 安装 Redis</h2><h3 id="查看可用的-Redis-版本"><a href="#查看可用的-Redis-版本" class="headerlink" title="查看可用的 Redis 版本"></a>查看可用的 Redis 版本</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">[root@VM-4-9-centos ~]# docker search redis</span><br><span class="line">INDEX       NAME                                       DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED</span><br><span class="line">docker.io   docker.io/redis                            Redis is an open source key-value store th...   9554      [OK]</span><br><span class="line">docker.io   docker.io/bitnami/redis                    Bitnami Redis Docker Image                      185                  [OK]</span><br><span class="line">docker.io   docker.io/sameersbn/redis                                                                  83                   [OK]</span><br><span class="line">docker.io   docker.io/grokzen/redis-cluster            Redis cluster 3.0, 3.2, 4.0, 5.0, 6.0, 6.2      78</span><br><span class="line">docker.io   docker.io/rediscommander/redis-commander   Alpine image for redis-commander - Redis m...   60                   [OK]</span><br><span class="line">docker.io   docker.io/redislabs/redisearch             Redis With the RedisSearch module pre-load...   34</span><br><span class="line">docker.io   docker.io/redislabs/redis                  Clustered in-memory database engine compat...   30</span><br><span class="line">docker.io   docker.io/redislabs/redisinsight           RedisInsight - The GUI for Redis                30</span><br><span class="line">docker.io   docker.io/oliver006/redis_exporter          Prometheus Exporter for Redis Metrics. Su...   26</span><br><span class="line">docker.io   docker.io/arm32v7/redis                    Redis is an open source key-value store th...   24</span><br><span class="line">docker.io   docker.io/bitnami/redis-sentinel           Bitnami Docker Image for Redis Sentinel         23                   [OK]</span><br><span class="line">docker.io   docker.io/redislabs/rejson                 RedisJSON - Enhanced JSON data type proces...   23</span><br><span class="line">docker.io   docker.io/redislabs/redisgraph             A graph database module for Redis               15                   [OK]</span><br><span class="line">docker.io   docker.io/redislabs/redismod               An automated build of redismod - latest Re...   13                   [OK]</span><br><span class="line">docker.io   docker.io/arm64v8/redis                    Redis is an open source key-value store th...   12</span><br><span class="line">docker.io   docker.io/webhippie/redis                  Docker images for Redis                         11                   [OK]</span><br><span class="line">docker.io   docker.io/insready/redis-stat              Docker image for the real-time Redis monit...   10                   [OK]</span><br><span class="line">docker.io   docker.io/s7anley/redis-sentinel-docker    Redis Sentinel                                  10                   [OK]</span><br><span class="line">docker.io   docker.io/goodsmileduck/redis-cli          redis-cli on alpine                             9                    [OK]</span><br><span class="line">docker.io   docker.io/circleci/redis                   CircleCI images for Redis                       7                    [OK]</span><br><span class="line">docker.io   docker.io/centos/redis-32-centos7          Redis in-memory data structure store, used...   5</span><br><span class="line">docker.io   docker.io/clearlinux/redis                 Redis key-value data structure server with...   3</span><br><span class="line">docker.io   docker.io/tiredofit/redis                  Redis Server w/ Zabbix monitoring and S6 O...   1                    [OK]</span><br><span class="line">docker.io   docker.io/wodby/redis                      Redis container image with orchestration        1                    [OK]</span><br><span class="line">docker.io   docker.io/xetamus/redis-resource           forked redis-resource                           0                    [OK]</span><br></pre></td></tr></table></figure><span id="more"></span><h3 id="获取最新版的-Redis-镜像"><a href="#获取最新版的-Redis-镜像" class="headerlink" title="获取最新版的 Redis 镜像"></a>获取最新版的 Redis 镜像</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[root@VM-4-9-centos ~]# docker pull redis:latest</span><br><span class="line">Trying to pull repository docker.io/library/redis ...</span><br><span class="line">latest: Pulling from docker.io/library/redis</span><br><span class="line">69692152171a: Already exists</span><br><span class="line">a4a46f2fd7e0: Pull complete</span><br><span class="line">bcdf6fddc3bd: Pull complete</span><br><span class="line">2902e41faefa: Pull complete</span><br><span class="line">df3e1d63cdb1: Pull complete</span><br><span class="line">fa57f005a60d: Pull complete</span><br><span class="line">Digest: sha256:7e2c6181ad5c425443b56c7c73a9cd6df24a122345847d1ea9bb86a5afc76325</span><br><span class="line">Status: Downloaded newer image for docker.io/redis:latest</span><br></pre></td></tr></table></figure><h3 id="查看本地镜像"><a href="#查看本地镜像" class="headerlink" title="查看本地镜像"></a>查看本地镜像</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@VM-4-9-centos ~]# docker images |grep redis</span><br><span class="line">docker.io/redis                     latest              fad0ee7e917a        7 days ago          105 MB</span><br></pre></td></tr></table></figure><h3 id="运行容器"><a href="#运行容器" class="headerlink" title="运行容器"></a>运行容器</h3><p>使用以下命令来运行 redis 容器：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@VM-4-9-centos ~]# docker run -itd --name redis-test -p 6379:6379 redis</span><br><span class="line">dffc411e699ecb26e19376c68c3d37487bf49121d344b66f146b94e11c713a38</span><br></pre></td></tr></table></figure><p>参数说明：</p><ul><li><strong>-p 6379:6379</strong>：映射容器服务的 6379 端口到宿主机的 6379 端口。外部可以直接通过宿主机ip:6379 访问到 Redis 的服务。</li></ul><h3 id="安装成功"><a href="#安装成功" class="headerlink" title="安装成功"></a>安装成功</h3><p>通过 <strong>docker ps</strong> 命令查看容器的运行信息：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@VM-4-9-centos ~]# docker ps |grep redis</span><br><span class="line">dffc411e699e        redis                     &quot;docker-entrypoint...&quot;   4 minutes ago       Up 4 minutes        0.0.0.0:6379-&gt;6379/tcp                         redis-test</span><br></pre></td></tr></table></figure><p>通过 redis-cli 连接测试使用 redis 服务</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@VM-4-9-centos ~]# docker exec -it redis-test /bin/bash</span><br><span class="line">root@dffc411e699e:/data# redis-cli</span><br><span class="line">127.0.0.1:6379&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Redis </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Docker </tag>
+            
+            <tag> 安装 </tag>
+            
+            <tag> 单机 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Linux源码安装Redis</title>
+      <link href="/post/703640c2.html"/>
+      <url>/post/703640c2.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Linux源码安装Redis"><a href="#Linux源码安装Redis" class="headerlink" title="Linux源码安装Redis"></a>Linux源码安装Redis</h2><h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><p><a href="http://redis.io/download">http://redis.io/download</a></p><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>下载、解压和编译Redis：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ wget https://download.redis.io/releases/redis-6.2.4.tar.gz</span><br><span class="line">$ tar xzf redis-6.2.4.tar.gz</span><br><span class="line">$ cd redis-6.2.4</span><br><span class="line">$ make</span><br></pre></td></tr></table></figure><span id="more"></span><h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>现在编译的二进制文件在<code>src</code> 目录中可用 。运行Redis：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ src/redis-server</span><br></pre></td></tr></table></figure><h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>您可以使用内置客户端与 Redis 交互：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ src/redis-cli</span><br><span class="line">redis&gt; set foo bar</span><br><span class="line">OK</span><br><span class="line">redis&gt; get foo</span><br><span class="line">&quot;bar&quot;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Redis </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 安装 </tag>
+            
+            <tag> 单机 </tag>
+            
+            <tag> Liunx </tag>
+            
+            <tag> Centos </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>解决Hexo图片无法显示问题</title>
       <link href="/post/57d980c.html"/>
       <url>/post/57d980c.html</url>
@@ -35,7 +95,7 @@
       <link href="/post/a01b8af8.html"/>
       <url>/post/a01b8af8.html</url>
       
-        <content type="html"><![CDATA[<h2 id="Windows-下安装"><a href="#Windows-下安装" class="headerlink" title="Windows 下安装"></a>Windows 下安装</h2><p><strong>下载地址：</strong><a href="https://github.com/tporadowski/redis/releases">https://github.com/tporadowski/redis/releases</a></p><p>Redis 支持 32 位和 64 位。这个需要根据你系统平台的实际情况选择，这里我们下载 <strong>Redis-x64-xxx.zip</strong>压缩包并解压。</p><img data-src="/post/a01b8af8/1.png" class><span id="more"></span><p>打开文件夹，内容如下：</p><img data-src="/post/a01b8af8/2.jpg" class><p>在解压目录按住Shift再点击右键选择命令窗口，运行：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-server.exe redis.windows.conf</span><br></pre></td></tr></table></figure><p>启动异常：</p><img data-src="/post/a01b8af8/3.jpg" class>]]></content>
+        <content type="html"><![CDATA[<h2 id="Windows-下安装"><a href="#Windows-下安装" class="headerlink" title="Windows 下安装"></a>Windows 下安装</h2><h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><p><a href="https://github.com/tporadowski/redis/releases">https://github.com/tporadowski/redis/releases</a></p><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>Redis 支持 32 位和 64 位。这个需要根据你系统平台的实际情况选择，这里我们下载 <strong>Redis-x64-5.0.10.zip</strong>压缩包并解压。</p><img data-src="/post/a01b8af8/1.png" class><span id="more"></span><p>打开文件夹，内容如下：</p><img data-src="/post/a01b8af8/2.jpg" class><h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><p>在解压目录按住Shift再点击右键选择命令窗口，运行：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-server.exe redis.windows.conf</span><br></pre></td></tr></table></figure><img data-src="/post/a01b8af8/3.jpg" class><h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>这时候另启一个命令窗口，原来的不要关闭，不然就无法访问服务端了。</p><p>切换到 redis 目录下运行:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-cli.exe -h 127.0.0.1 -p 6379</span><br></pre></td></tr></table></figure><p>设置键值对:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set myKey abc</span><br></pre></td></tr></table></figure><p>取出键值对:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">get myKey</span><br></pre></td></tr></table></figure><img data-src="/post/a01b8af8/4.jpg" class>]]></content>
       
       
       <categories>
@@ -47,32 +107,13 @@
       
         <tags>
             
-            <tag> windows </tag>
-            
             <tag> 安装 </tag>
             
             <tag> 单机 </tag>
             
+            <tag> windows </tag>
+            
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Redis安装</title>
-      <link href="/post/c9f6f059.html"/>
-      <url>/post/c9f6f059.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="Redis-安装"><a href="#Redis-安装" class="headerlink" title="Redis 安装"></a>Redis 安装</h1><h2 id="Windows-下安装"><a href="#Windows-下安装" class="headerlink" title="Windows 下安装"></a>Windows 下安装</h2><p><strong>下载地址：</strong><a href="https://github.com/tporadowski/redis/releases">https://github.com/tporadowski/redis/releases</a></p><p>Redis 支持 32 位和 64 位。这个需要根据你系统平台的实际情况选择，这里我们下载 <strong>Redis-x64-xxx.zip</strong>压缩包到 C 盘，解压后，将文件夹重新命名为 <strong>redis</strong>。</p><p><img data-src="./c9f6f059/image-20210608094756575.png"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Redis </category>
-          
-      </categories>
-      
       
     </entry>
     

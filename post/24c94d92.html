@@ -23,21 +23,22 @@
     var CONFIG = {"hostname":"github.tmico.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="版本hexo: 5.4.0 解决方案如下： 　　1. 在根目录下配置文件_config.yml 中有 post_asset_folder:false改为true。这样在建立文件时，Hexo会自动建立一个与文章同名的文件夹，这样就可以把与该文章相关的所有资源（图片）都放到那个文件夹里方便后面引用。如这里我放了一张test.jpg的图片。 　　2. git bash安装插件：npm install h">
+  <meta name="description" content="Docker 安装 Redis查看可用的 Redis 版本123456789101112131415161718192021222324252627[root@VM-4-9-centos ~]# docker search redisINDEX       NAME                                       DESCRIPTION">
 <meta property="og:type" content="article">
-<meta property="og:title" content="解决Hexo图片无法显示问题">
-<meta property="og:url" content="https://github.tmico.cn/post/57d980c.html">
+<meta property="og:title" content="Docker安装Redis">
+<meta property="og:url" content="https://github.tmico.cn/post/24c94d92.html">
 <meta property="og:site_name" content="MICO">
-<meta property="og:description" content="版本hexo: 5.4.0 解决方案如下： 　　1. 在根目录下配置文件_config.yml 中有 post_asset_folder:false改为true。这样在建立文件时，Hexo会自动建立一个与文章同名的文件夹，这样就可以把与该文章相关的所有资源（图片）都放到那个文件夹里方便后面引用。如这里我放了一张test.jpg的图片。 　　2. git bash安装插件：npm install h">
+<meta property="og:description" content="Docker 安装 Redis查看可用的 Redis 版本123456789101112131415161718192021222324252627[root@VM-4-9-centos ~]# docker search redisINDEX       NAME                                       DESCRIPTION">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-06-09T03:49:00.000Z">
-<meta property="article:modified_time" content="2021-06-09T03:50:47.003Z">
+<meta property="article:published_time" content="2021-06-09T07:53:08.000Z">
+<meta property="article:modified_time" content="2021-06-09T09:41:35.827Z">
 <meta property="article:author" content="mico">
-<meta property="article:tag" content="hexo">
-<meta property="article:tag" content="图片">
+<meta property="article:tag" content="Docker">
+<meta property="article:tag" content="安装">
+<meta property="article:tag" content="单机">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://github.tmico.cn/post/57d980c.html">
+<link rel="canonical" href="https://github.tmico.cn/post/24c94d92.html">
 
 
 <script id="page-configurations">
@@ -50,7 +51,7 @@
   };
 </script>
 
-  <title>解决Hexo图片无法显示问题 | MICO</title>
+  <title>Docker安装Redis | MICO</title>
   
 
 
@@ -202,7 +203,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://github.tmico.cn/post/57d980c.html">
+    <link itemprop="mainEntityOfPage" href="https://github.tmico.cn/post/24c94d92.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -215,7 +216,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          解决Hexo图片无法显示问题
+          Docker安装Redis
         </h1>
 
         <div class="post-meta">
@@ -226,7 +227,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-06-09 11:49:00" itemprop="dateCreated datePublished" datetime="2021-06-09T11:49:00+08:00">2021-06-09</time>
+              <time title="创建时间：2021-06-09 15:53:08" itemprop="dateCreated datePublished" datetime="2021-06-09T15:53:08+08:00">2021-06-09</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -234,7 +235,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
+                  <a href="/categories/Redis/" itemprop="url" rel="index"><span itemprop="name">Redis</span></a>
                 </span>
             </span>
 
@@ -251,14 +252,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>425</span>
+              <span>3k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>3 分钟</span>
             </span>
 
         </div>
@@ -270,13 +271,27 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>版本hexo: 5.4.0</p>
-<p>解决方案如下：</p>
-<p>　　1. 在根目录下配置文件<code>_config.yml</code> 中有 <code>post_asset_folder:false改为true</code>。这样在建立文件时，<code>Hexo</code>会自动建立一个与文章同名的文件夹，这样就可以把与该文章相关的所有资源（图片）都放到那个文件夹里方便后面引用。如这里我放了一张test.jpg的图片。</p>
-<p>　　2. git bash安装插件：npm install <a target="_blank" rel="noopener" href="https://github.com/7ym0n/hexo-asset-image">https://github.com/7ym0n/hexo-asset-image</a> –save（这是个修改过的插件，经测试无问题），使用这个插件来引入图片，而不是网上那些方法里说的用传统md语法相对路径的方法。</p>
-<p>　　3. 插入图片时用这种方式：****</p>
-<p>　　　　　<strong>其中test.jpg就是你要引用的图片，我这里就是test.jpg，后面的This is an test image是图片描述，可以自己修改。</strong></p>
-<p>　　4. 这样就能成功显示了，测试下吧：hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</p>
+        <h2 id="Docker-安装-Redis"><a href="#Docker-安装-Redis" class="headerlink" title="Docker 安装 Redis"></a>Docker 安装 Redis</h2><h3 id="查看可用的-Redis-版本"><a href="#查看可用的-Redis-版本" class="headerlink" title="查看可用的 Redis 版本"></a>查看可用的 Redis 版本</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">[root@VM-4-9-centos ~]# docker search redis</span><br><span class="line">INDEX       NAME                                       DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED</span><br><span class="line">docker.io   docker.io/redis                            Redis is an open source key-value store th...   9554      [OK]</span><br><span class="line">docker.io   docker.io/bitnami/redis                    Bitnami Redis Docker Image                      185                  [OK]</span><br><span class="line">docker.io   docker.io/sameersbn/redis                                                                  83                   [OK]</span><br><span class="line">docker.io   docker.io/grokzen/redis-cluster            Redis cluster 3.0, 3.2, 4.0, 5.0, 6.0, 6.2      78</span><br><span class="line">docker.io   docker.io/rediscommander/redis-commander   Alpine image for redis-commander - Redis m...   60                   [OK]</span><br><span class="line">docker.io   docker.io/redislabs/redisearch             Redis With the RedisSearch module pre-load...   34</span><br><span class="line">docker.io   docker.io/redislabs/redis                  Clustered in-memory database engine compat...   30</span><br><span class="line">docker.io   docker.io/redislabs/redisinsight           RedisInsight - The GUI for Redis                30</span><br><span class="line">docker.io   docker.io/oliver006/redis_exporter          Prometheus Exporter for Redis Metrics. Su...   26</span><br><span class="line">docker.io   docker.io/arm32v7/redis                    Redis is an open source key-value store th...   24</span><br><span class="line">docker.io   docker.io/bitnami/redis-sentinel           Bitnami Docker Image for Redis Sentinel         23                   [OK]</span><br><span class="line">docker.io   docker.io/redislabs/rejson                 RedisJSON - Enhanced JSON data type proces...   23</span><br><span class="line">docker.io   docker.io/redislabs/redisgraph             A graph database module for Redis               15                   [OK]</span><br><span class="line">docker.io   docker.io/redislabs/redismod               An automated build of redismod - latest Re...   13                   [OK]</span><br><span class="line">docker.io   docker.io/arm64v8/redis                    Redis is an open source key-value store th...   12</span><br><span class="line">docker.io   docker.io/webhippie/redis                  Docker images for Redis                         11                   [OK]</span><br><span class="line">docker.io   docker.io/insready/redis-stat              Docker image for the real-time Redis monit...   10                   [OK]</span><br><span class="line">docker.io   docker.io/s7anley/redis-sentinel-docker    Redis Sentinel                                  10                   [OK]</span><br><span class="line">docker.io   docker.io/goodsmileduck/redis-cli          redis-cli on alpine                             9                    [OK]</span><br><span class="line">docker.io   docker.io/circleci/redis                   CircleCI images for Redis                       7                    [OK]</span><br><span class="line">docker.io   docker.io/centos/redis-32-centos7          Redis in-memory data structure store, used...   5</span><br><span class="line">docker.io   docker.io/clearlinux/redis                 Redis key-value data structure server with...   3</span><br><span class="line">docker.io   docker.io/tiredofit/redis                  Redis Server w/ Zabbix monitoring and S6 O...   1                    [OK]</span><br><span class="line">docker.io   docker.io/wodby/redis                      Redis container image with orchestration        1                    [OK]</span><br><span class="line">docker.io   docker.io/xetamus/redis-resource           forked redis-resource                           0                    [OK]</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h3 id="获取最新版的-Redis-镜像"><a href="#获取最新版的-Redis-镜像" class="headerlink" title="获取最新版的 Redis 镜像"></a>获取最新版的 Redis 镜像</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[root@VM-4-9-centos ~]# docker pull redis:latest</span><br><span class="line">Trying to pull repository docker.io/library/redis ...</span><br><span class="line">latest: Pulling from docker.io/library/redis</span><br><span class="line">69692152171a: Already exists</span><br><span class="line">a4a46f2fd7e0: Pull complete</span><br><span class="line">bcdf6fddc3bd: Pull complete</span><br><span class="line">2902e41faefa: Pull complete</span><br><span class="line">df3e1d63cdb1: Pull complete</span><br><span class="line">fa57f005a60d: Pull complete</span><br><span class="line">Digest: sha256:7e2c6181ad5c425443b56c7c73a9cd6df24a122345847d1ea9bb86a5afc76325</span><br><span class="line">Status: Downloaded newer image for docker.io/redis:latest</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看本地镜像"><a href="#查看本地镜像" class="headerlink" title="查看本地镜像"></a>查看本地镜像</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@VM-4-9-centos ~]# docker images |grep redis</span><br><span class="line">docker.io/redis                     latest              fad0ee7e917a        7 days ago          105 MB</span><br></pre></td></tr></table></figure>
+
+<h3 id="运行容器"><a href="#运行容器" class="headerlink" title="运行容器"></a>运行容器</h3><p>使用以下命令来运行 redis 容器：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@VM-4-9-centos ~]# docker run -itd --name redis-test -p 6379:6379 redis</span><br><span class="line">dffc411e699ecb26e19376c68c3d37487bf49121d344b66f146b94e11c713a38</span><br></pre></td></tr></table></figure>
+
+<p>参数说明：</p>
+<ul>
+<li><strong>-p 6379:6379</strong>：映射容器服务的 6379 端口到宿主机的 6379 端口。外部可以直接通过宿主机ip:6379 访问到 Redis 的服务。</li>
+</ul>
+<h3 id="安装成功"><a href="#安装成功" class="headerlink" title="安装成功"></a>安装成功</h3><p>通过 <strong>docker ps</strong> 命令查看容器的运行信息：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@VM-4-9-centos ~]# docker ps |grep redis</span><br><span class="line">dffc411e699e        redis                     &quot;docker-entrypoint...&quot;   4 minutes ago       Up 4 minutes        0.0.0.0:6379-&gt;6379/tcp                         redis-test</span><br></pre></td></tr></table></figure>
+
+<p>通过 redis-cli 连接测试使用 redis 服务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@VM-4-9-centos ~]# docker exec -it redis-test /bin/bash</span><br><span class="line">root@dffc411e699e:/data# redis-cli</span><br><span class="line">127.0.0.1:6379&gt;</span><br></pre></td></tr></table></figure>
+
 
     </div>
 
@@ -292,7 +307,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://github.tmico.cn/post/57d980c.html" title="解决Hexo图片无法显示问题">https://github.tmico.cn/post/57d980c.html</a>
+    <a href="https://github.tmico.cn/post/24c94d92.html" title="Docker安装Redis">https://github.tmico.cn/post/24c94d92.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -304,8 +319,9 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
-              <a href="/tags/%E5%9B%BE%E7%89%87/" rel="tag"><i class="fa fa-tag"></i> 图片</a>
+              <a href="/tags/Docker/" rel="tag"><i class="fa fa-tag"></i> Docker</a>
+              <a href="/tags/%E5%AE%89%E8%A3%85/" rel="tag"><i class="fa fa-tag"></i> 安装</a>
+              <a href="/tags/%E5%8D%95%E6%9C%BA/" rel="tag"><i class="fa fa-tag"></i> 单机</a>
           </div>
 
         
@@ -314,13 +330,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/post/a01b8af8.html" rel="prev" title="Windows安装Redis">
-      <i class="fa fa-chevron-left"></i> Windows安装Redis
+    <a href="/post/703640c2.html" rel="prev" title="Linux源码安装Redis">
+      <i class="fa fa-chevron-left"></i> Linux源码安装Redis
     </a></div>
-      <div class="post-nav-item">
-    <a href="/post/703640c2.html" rel="next" title="Linux源码安装Redis">
-      Linux源码安装Redis <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -379,6 +392,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-%E5%AE%89%E8%A3%85-Redis"><span class="nav-number">1.</span> <span class="nav-text">Docker 安装 Redis</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%8F%AF%E7%94%A8%E7%9A%84-Redis-%E7%89%88%E6%9C%AC"><span class="nav-number">1.1.</span> <span class="nav-text">查看可用的 Redis 版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E6%9C%80%E6%96%B0%E7%89%88%E7%9A%84-Redis-%E9%95%9C%E5%83%8F"><span class="nav-number">1.2.</span> <span class="nav-text">获取最新版的 Redis 镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%9C%B0%E9%95%9C%E5%83%8F"><span class="nav-number">1.3.</span> <span class="nav-text">查看本地镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E5%AE%B9%E5%99%A8"><span class="nav-number">1.4.</span> <span class="nav-text">运行容器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F"><span class="nav-number">1.5.</span> <span class="nav-text">安装成功</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
