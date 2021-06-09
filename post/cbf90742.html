@@ -130,17 +130,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">10</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">8</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">15</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -328,10 +328,10 @@ console.log(ary); // 输出 []，空数组，即被清空了</pre>
 
 <p>JavaScript中Array的length属性非常有特点一一它不是只读的。因此，可以通过设置这个属性来达到从数组的末尾移除项或添加新项的目的。</p>
 <div class="cnblogs_code">
-<pre class="">var colors = ["red", "blue", "grey"]; // 创建一个包含3个字符串的数组
+<pre class>var colors = ["red", "blue", "grey"]; // 创建一个包含3个字符串的数组
 colors.length = 2;
 
-<p>console.log(colors[2]); // undefined</pre></p>
+<p>console.log(colors[2]); // undefined</p></pre><p></p>
 </div>
 <strong>2.delete方法</strong>
 
@@ -341,11 +341,11 @@ colors.length = 2;
 delete colors[0];
 
 console.log(colors); // [undefined, "blue", "grey", "green"]</pre>
-<p class=""><strong>3.pop()栈方法</strong></p>
+<p class><strong>3.pop()栈方法</strong></p>
 JavaScript中的Array对象提供了一个pop()栈方法用于弹出并返回数组中的最后一项，某种程度上可以当做删除用。
 
 <p>栈数据结构的访问规则是FILO（First In Last Out，先进后出），栈操作在栈顶添加项，从栈顶移除项，使用pop()方法，它能移除数组中的最后一项并返回该项，并且数组的长度减1。</p>
-<pre class="">var colors = ["red", "blue", "grey"];
+<pre class>var colors = ["red", "blue", "grey"];
 var color = colors.pop();
 
 console.log(color); // "grey"
@@ -354,7 +354,7 @@ console.log(colors.length); // 2</pre>
 <p><strong>4.shift()队列方法</strong></p>
 <p>JavaScript中的Array对象提供了一个shift()队列方法用于弹出并返回数组中的第一项，某种程度上也可以当做删除用。</p>
 <p>队列数据结构的访问规则是FIFO（First In First Out，先进先出），队列在列表的末端添加项，从列表的前端移除项，使用shift()方法，它能够移除数组中的第一个项并返回该项，并且数组的长度减1。</p>
-<pre class="">var colors = ["red", "blue", "grey"];
+<pre class>var colors = ["red", "blue", "grey"];
 var color = colors.shift();
 
 console.log(color); // "red"
@@ -366,7 +366,7 @@ console.log(colors.length); // 2</pre>
 <pre>var colors = ["red", "blue", "grey"];
 var color = colors.splice(0, 1);
 
-<p>console.log(color); // “red”<br>console.log(colors); // [“blue”, “grey”]</pre></p>
+<p>console.log(color); // “red”<br>console.log(colors); // [“blue”, “grey”]</p></pre><p></p>
 </div>
 可以看出，在调用了splice(0, 1)方法时，数组从第一项开始，删除了一项。
 
@@ -374,32 +374,32 @@ var color = colors.splice(0, 1);
 <p>所谓的迭代方法就是用循环迭代数组元素，发现符合要删除的项则删除。用的最多的地方，可能是当数组中的元素为对象的时候，可以根据对象的某个属性（例如ID）来删除数组元素。</p>
 <p>第一种用最常见的ForEach循环来对比元素找到之后将其删除。</p>
 <div class="cnblogs_code">
-<pre class="">var colors = ["red", "blue", "grey"];
+<pre class>var colors = ["red", "blue", "grey"];
 
-<p>colors.forEach(function(item, index, arr) {<br>    if(item === “red”) {<br>        arr.splice(index, 1);<br>    }<br>});</pre></p>
+<p>colors.forEach(function(item, index, arr) {<br>    if(item === “red”) {<br>        arr.splice(index, 1);<br>    }<br>});</p></pre><p></p>
 </div>
 可以看到这里还要配合splice()方法去实现删除，循环只是为了找到特定的元素。另外一种思路是循环将不需要删除的元素推入到新的数组中，也能达到假性删除特定元素的目的。
 
 <p>第二种我们用循环中的filter方法。</p>
 <div class="cnblogs_code">
-<pre class="">var colors = ["red", "blue", "grey"];
+<pre class>var colors = ["red", "blue", "grey"];
 
 <p>colors = colors.filter(function(item) {<br>    return item != “red”<br>});</p>
-<p>console.log(colors); // [“blue”, “grey”]</pre></p>
+<p>console.log(colors); // [“blue”, “grey”]</p></pre><p></p>
 </div>
 代码很简单，找出元素不是red的项数返回给colors（其实是得到了一个新的数组，并不是在原数组上进行删除操作），一定程度上也算是达到了删除特定元素的目的。
 
 <p><strong>7.prototype原型方法</strong></p>
 <p>可以通过在Array的原型上添加方法来达到删除的目的。</p>
 <div class="cnblogs_code">
-<pre class="">Array.prototype.remove = function(dx) {
+<pre class>Array.prototype.remove = function(dx) {
 　　if(isNaN(dx) || dx &gt; this.length){
 　　　　return false;
 　　}
 
 <p>　　for(var i = 0, n = 0; i &lt; this.length; i++) {<br>　　　　if(this[i] != this[dx]) {<br>　　　　　　this[n++] = this[i];<br>　　　　}<br>　　}<br>　　this.length -= 1;<br>};</p>
 <p>var colors = [“red”, “blue”, “grey”];<br>colors.remove(1);</p>
-<p>console.log(colors); // [“red”, “grey”]</pre></p>
+<p>console.log(colors); // [“red”, “grey”]</p></pre><p></p>
 </div>
 这种方法其实就是自己实现一个删除的逻辑，然后把删除方法添加给了Array的原型对象，则在此环境中的所有Array对象都可以使用该方法。尽管可以这么做，但是不推荐在产品化的程序中修改原生对象的原型。道理很简单，如果只是某个实现中缺少某个方法，就在原生对象的原型中添加这个方法，那么当在另一个支持该方法的实现中运行代码时，就可能导致命名冲突。而且这样做可能会意外地导致原生方法被重写。
 <h1></h1>
@@ -521,29 +521,44 @@ var color = colors.splice(0, 1);
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/FClever" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;FClever" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
   <div class="cc-license motion-element" itemprop="license">
     <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
   </div>
 
 
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="/https/tmico.cn/kodbox" title="https&#x2F;&#x2F;tmico.cn&#x2F;kodbox">kodbox</a>
+        </li>
+    </ul>
+  </div>
 
       </div>
 
@@ -574,13 +589,13 @@ var color = colors.splice(0, 1);
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">14k</span>
+    <span title="站点总字数">17k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">13 分钟</span>
+    <span title="站点阅读时长">15 分钟</span>
 </div>
 
 <!--
@@ -633,7 +648,7 @@ var color = colors.splice(0, 1);
 |
 <span id="busuanzi_container_site_uv" title="总访问量">
   <span class="post-meta-item-icon"><i class="fa fa-user"></i> </span>
-  <span id="busuanzi_value_site_uv" class=”fa-spinner“></span>人次
+  <span id="busuanzi_value_site_uv" class=”fa-spinner“  ></span>人
 </span>
 
 

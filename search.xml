@@ -4,11 +4,130 @@
   
     
     <entry>
+      <title>解决Hexo图片无法显示问题</title>
+      <link href="/post/57d980c.html"/>
+      <url>/post/57d980c.html</url>
+      
+        <content type="html"><![CDATA[<p>版本hexo: 5.4.0</p><p>解决方案如下：</p><p>　　1. 在根目录下配置文件<code>_config.yml</code> 中有 <code>post_asset_folder:false改为true</code>。这样在建立文件时，<code>Hexo</code>会自动建立一个与文章同名的文件夹，这样就可以把与该文章相关的所有资源（图片）都放到那个文件夹里方便后面引用。如这里我放了一张test.jpg的图片。</p><p>　　2. git bash安装插件：npm install <a href="https://github.com/7ym0n/hexo-asset-image">https://github.com/7ym0n/hexo-asset-image</a> –save（这是个修改过的插件，经测试无问题），使用这个插件来引入图片，而不是网上那些方法里说的用传统md语法相对路径的方法。</p><p>　　3. 插入图片时用这种方式：****</p><p>　　　　　<strong>其中test.jpg就是你要引用的图片，我这里就是test.jpg，后面的This is an test image是图片描述，可以自己修改。</strong></p><p>　　4. 这样就能成功显示了，测试下吧：hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> 图片 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Windows安装Redis</title>
+      <link href="/post/a01b8af8.html"/>
+      <url>/post/a01b8af8.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Windows-下安装"><a href="#Windows-下安装" class="headerlink" title="Windows 下安装"></a>Windows 下安装</h2><p><strong>下载地址：</strong><a href="https://github.com/tporadowski/redis/releases">https://github.com/tporadowski/redis/releases</a></p><p>Redis 支持 32 位和 64 位。这个需要根据你系统平台的实际情况选择，这里我们下载 <strong>Redis-x64-xxx.zip</strong>压缩包并解压。</p><img data-src="/post/a01b8af8/1.png" class><span id="more"></span><p>打开文件夹，内容如下：</p><img data-src="/post/a01b8af8/2.jpg" class><p>在解压目录按住Shift再点击右键选择命令窗口，运行：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-server.exe redis.windows.conf</span><br></pre></td></tr></table></figure><p>启动异常：</p><img data-src="/post/a01b8af8/3.jpg" class>]]></content>
+      
+      
+      <categories>
+          
+          <category> Redis </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> windows </tag>
+            
+            <tag> 安装 </tag>
+            
+            <tag> 单机 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Redis安装</title>
+      <link href="/post/c9f6f059.html"/>
+      <url>/post/c9f6f059.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="Redis-安装"><a href="#Redis-安装" class="headerlink" title="Redis 安装"></a>Redis 安装</h1><h2 id="Windows-下安装"><a href="#Windows-下安装" class="headerlink" title="Windows 下安装"></a>Windows 下安装</h2><p><strong>下载地址：</strong><a href="https://github.com/tporadowski/redis/releases">https://github.com/tporadowski/redis/releases</a></p><p>Redis 支持 32 位和 64 位。这个需要根据你系统平台的实际情况选择，这里我们下载 <strong>Redis-x64-xxx.zip</strong>压缩包到 C 盘，解压后，将文件夹重新命名为 <strong>redis</strong>。</p><p><img data-src="./c9f6f059/image-20210608094756575.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Redis </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hexo安装记录</title>
+      <link href="/post/93c315da.html"/>
+      <url>/post/93c315da.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="插件记录"><a href="#插件记录" class="headerlink" title="插件记录"></a>插件记录</h2><h3 id="图片插件"><a href="#图片插件" class="headerlink" title="图片插件"></a>图片插件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure><p>在_config.yml配置文件中，修改为 post_asset_folder: true</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>设计模式简介</title>
+      <link href="/post/362df446.html"/>
+      <url>/post/362df446.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="设计模式简介"><a href="#设计模式简介" class="headerlink" title="设计模式简介"></a>设计模式简介</h2><p>设计模式（Design pattern）代表了最佳的实践，通常被有经验的面向对象的软件开发人员所采用。设计模式是软件开发人员在软件开发过程中面临的一般问题的解决方案。这些解决方案是众多软件开发人员经过相当长的一段时间的试验和错误总结出来的。</p><p>设计模式是一套被反复使用的、多数人知晓的、经过分类编目的、代码设计经验的总结。使用设计模式是为了重用代码、让代码更容易被他人理解、保证代码可靠性。 毫无疑问，设计模式于己于他人于系统都是多赢的，设计模式使代码编制真正工程化，设计模式是软件工程的基石，如同大厦的一块块砖石一样。项目中合理地运用设计模式可以完美地解决很多问题，每种模式在现实中都有相应的原理来与之对应，每种模式都描述了一个在我们周围不断重复发生的问题，以及该问题的核心解决方案，这也是设计模式能被广泛应用的原因。<span id="more"></span></p><h2 id="设计模式的类型"><a href="#设计模式的类型" class="headerlink" title="设计模式的类型"></a>设计模式的类型</h2><p>根据设计模式的参考书 <strong>Design Patterns - Elements of Reusable Object-Oriented Software（中文译名：设计模式 - 可复用的面向对象软件元素）</strong> 中所提到的，总共有 23 种设计模式。这些模式可以分为三大类：创建型模式（Creational Patterns）、结构型模式（Structural Patterns）、行为型模式（Behavioral Patterns）。当然，我们还会讨论另一类设计模式：J2EE 设计模式。</p><table><thead><tr><th align="left">序号</th><th align="left">模式 &amp; 描述</th><th align="left">包括</th></tr></thead><tbody><tr><td align="left">1</td><td align="left"><strong>创建型模式</strong> 这些设计模式提供了一种在创建对象的同时隐藏创建逻辑的方式，而不是使用 new 运算符直接实例化对象。这使得程序在判断针对某个给定实例需要创建哪些对象时更加灵活。</td><td align="left">工厂模式（Factory Pattern）抽象工厂模式（Abstract Factory Pattern）单例模式（Singleton Pattern）建造者模式（Builder Pattern）原型模式（Prototype Pattern）</td></tr><tr><td align="left">2</td><td align="left"><strong>结构型模式</strong> 这些设计模式关注类和对象的组合。继承的概念被用来组合接口和定义组合对象获得新功能的方式。</td><td align="left">适配器模式（Adapter Pattern）桥接模式（Bridge Pattern）过滤器模式（Filter、Criteria Pattern）组合模式（Composite Pattern）装饰器模式（Decorator Pattern）外观模式（Facade Pattern）享元模式（Flyweight Pattern）代理模式（Proxy Pattern）</td></tr><tr><td align="left">3</td><td align="left"><strong>行为型模式</strong> 这些设计模式特别关注对象之间的通信。</td><td align="left">责任链模式（Chain of Responsibility Pattern）命令模式（Command Pattern）解释器模式（Interpreter Pattern）迭代器模式（Iterator Pattern）中介者模式（Mediator Pattern）备忘录模式（Memento Pattern）观察者模式（Observer Pattern）状态模式（State Pattern）空对象模式（Null Object Pattern）策略模式（Strategy Pattern）模板模式（Template Pattern）访问者模式（Visitor Pattern）</td></tr><tr><td align="left">4</td><td align="left"><strong>J2EE 模式</strong> 这些设计模式特别关注表示层。这些模式是由 Sun Java Center 鉴定的。</td><td align="left">MVC 模式（MVC Pattern）业务代表模式（Business Delegate Pattern）组合实体模式（Composite Entity Pattern）数据访问对象模式（Data Access Object Pattern）前端控制器模式（Front Controller Pattern）拦截过滤器模式（Intercepting Filter Pattern）服务定位器模式（Service Locator Pattern）传输对象模式（Transfer Object Pattern）</td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> 设计模式 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ifconfig命令安装</title>
       <link href="/post/f4d8dc94.html"/>
       <url>/post/f4d8dc94.html</url>
       
-        <content type="html"><![CDATA[<!-- wp:paragraph --><p>CentOS7安装</p><!-- /wp:paragraph --><!-- wp:urvanov-syntax-highlighter/code-block --><div class="wp-block-urvanov-syntax-highlighter-code-block"><pre class="lang:sh decode:true " >yum search net-toolsyum install net-tools.x86_64</pre></div><!-- /wp:urvanov-syntax-highlighter/code-block --><!-- wp:urvanov-syntax-highlighter/code-block --><div class="wp-block-urvanov-syntax-highlighter-code-block"></div><!-- /wp:urvanov-syntax-highlighter/code-block --><!-- wp:urvanov-syntax-highlighter/code-block --><div class="wp-block-urvanov-syntax-highlighter-code-block"></div><!-- /wp:urvanov-syntax-highlighter/code-block --><!-- wp:paragraph --><p></p><!-- /wp:paragraph -->]]></content>
+        <content type="html"><![CDATA[<!-- wp:paragraph --><p>CentOS7安装</p><!-- /wp:paragraph --><!-- wp:urvanov-syntax-highlighter/code-block --><div class="wp-block-urvanov-syntax-highlighter-code-block"><pre class="lang:sh decode:true ">yum search net-toolsyum install net-tools.x86_64</pre></div><!-- /wp:urvanov-syntax-highlighter/code-block --><!-- wp:urvanov-syntax-highlighter/code-block --><div class="wp-block-urvanov-syntax-highlighter-code-block"></div><!-- /wp:urvanov-syntax-highlighter/code-block --><!-- wp:urvanov-syntax-highlighter/code-block --><div class="wp-block-urvanov-syntax-highlighter-code-block"></div><!-- /wp:urvanov-syntax-highlighter/code-block --><!-- wp:paragraph --><p></p><!-- /wp:paragraph -->]]></content>
       
       
       <categories>
@@ -54,7 +173,7 @@
       <link href="/post/cbf90742.html"/>
       <url>/post/cbf90742.html</url>
       
-        <content type="html"><![CDATA[<h2>数组属性</h2><div class="table-wrapper"><table style="height: 180px;" border="0" width="402" cellspacing="0" cellpadding="0"><tbody><tr><td valign="top" width="21%"><p align="left">属性</p></td><td valign="top" width="78%"><p align="left">描述</p></td></tr><tr><td valign="top" width="21%"><p align="left"><a href="http://www.w3school.com.cn/jsref/jsref_constructor_array.asp">constructor</a></p></td><td valign="top" width="78%"><p align="left">返回对创建此对象的数组函数的引用。</p></td></tr><tr><td valign="top" width="21%"><p align="left"><a href="http://www.w3school.com.cn/jsref/jsref_length_array.asp">length</a></p></td><td valign="top" width="78%"><p align="left">设置或返回数组中元素的数目。</p></td></tr><tr><td valign="top" width="21%"><p align="left"><a href="http://www.w3school.com.cn/jsref/jsref_prototype_array.asp">prototype</a></p></td><td valign="top" width="78%"><p align="left">使您有能力向对象添加属性和方法。</p></td></tr></tbody></table></div><span id="more"></span><h2><strong>一、创建数组并给数组元素赋值</strong></h2><strong>1.常规方式</strong><pre class="lang:js decode:true">var myCars = new Array();myCars[0] = "Saab";myCars[1] = "Volvo";myCars[2] = "BMW";</pre><strong>2.简洁方式-直接实例化</strong><pre class="lang:default decode:true ">var myCars = new Array("Saab","Volvo","BMW");</pre><strong>3.字面-隐式创建</strong><pre class="lang:default decode:true ">var myCars = ["Saab","Volvo","BMW"];</pre><h2><strong>二、清空数组元素</strong></h2><pre class="lang:default decode:true">var ary = [1,2,3,4]; ary.splice(0,ary.length);//清空数组 console.log(ary); // 输出 []，空数组，即被清空了</pre><h2><strong>三、删除数组元素</strong></h2><strong>1.length属性</strong><p>JavaScript中Array的length属性非常有特点一一它不是只读的。因此，可以通过设置这个属性来达到从数组的末尾移除项或添加新项的目的。</p><div class="cnblogs_code"><pre class="">var colors = ["red", "blue", "grey"]; // 创建一个包含3个字符串的数组colors.length = 2;<p>console.log(colors[2]); // undefined</pre></p></div><strong>2.delete方法</strong><p>JavaScript提供了一个delete关键字用来删除（清除）数组元素。</p><p>要注意的是，使用delete删除元素之后数组长度不变，只是被删除元素被置为undefined了。</p><pre class="lang:default decode:true ">var colors = ["red", "blue", "grey", "green"];delete colors[0];console.log(colors); // [undefined, "blue", "grey", "green"]</pre><p class=""><strong>3.pop()栈方法</strong></p>JavaScript中的Array对象提供了一个pop()栈方法用于弹出并返回数组中的最后一项，某种程度上可以当做删除用。<p>栈数据结构的访问规则是FILO（First In Last Out，先进后出），栈操作在栈顶添加项，从栈顶移除项，使用pop()方法，它能移除数组中的最后一项并返回该项，并且数组的长度减1。</p><pre class="">var colors = ["red", "blue", "grey"];var color = colors.pop();console.log(color); // "grey"console.log(colors.length); // 2</pre><p>可以看出，在调用pop()方法时，数组返回最后一项，即”grey”，数组的元素也仅剩两项。</p><p><strong>4.shift()队列方法</strong></p><p>JavaScript中的Array对象提供了一个shift()队列方法用于弹出并返回数组中的第一项，某种程度上也可以当做删除用。</p><p>队列数据结构的访问规则是FIFO（First In First Out，先进先出），队列在列表的末端添加项，从列表的前端移除项，使用shift()方法，它能够移除数组中的第一个项并返回该项，并且数组的长度减1。</p><pre class="">var colors = ["red", "blue", "grey"];var color = colors.shift();console.log(color); // "red"console.log(colors.length); // 2</pre><p>可以看出，在调用shift()方法时，数组返回第一项，即”red”，数组的元素也仅剩两项。</p><p><strong>5.splice()操作方法 </strong></p><p>在JavaScript的Array对象中提供了一个splice()方法用于对数组进行特定的操作。splice()恐怕要算最强大的数组方法了，他的用法有很多种，在此只介绍删除数组元素的方法。在删除数组元素的时候，它可以删除任意数量的项，只需要指定2个参数：要删除的第一项的位置和要删除的项数。</p><div class="cnblogs_code"><pre>var colors = ["red", "blue", "grey"];var color = colors.splice(0, 1);<p>console.log(color); // “red”<br>console.log(colors); // [“blue”, “grey”]</pre></p></div>可以看出，在调用了splice(0, 1)方法时，数组从第一项开始，删除了一项。<p><strong>6.迭代方法</strong></p><p>所谓的迭代方法就是用循环迭代数组元素，发现符合要删除的项则删除。用的最多的地方，可能是当数组中的元素为对象的时候，可以根据对象的某个属性（例如ID）来删除数组元素。</p><p>第一种用最常见的ForEach循环来对比元素找到之后将其删除。</p><div class="cnblogs_code"><pre class="">var colors = ["red", "blue", "grey"];<p>colors.forEach(function(item, index, arr) {<br>    if(item === “red”) {<br>        arr.splice(index, 1);<br>    }<br>});</pre></p></div>可以看到这里还要配合splice()方法去实现删除，循环只是为了找到特定的元素。另外一种思路是循环将不需要删除的元素推入到新的数组中，也能达到假性删除特定元素的目的。<p>第二种我们用循环中的filter方法。</p><div class="cnblogs_code"><pre class="">var colors = ["red", "blue", "grey"];<p>colors = colors.filter(function(item) {<br>    return item != “red”<br>});</p><p>console.log(colors); // [“blue”, “grey”]</pre></p></div>代码很简单，找出元素不是red的项数返回给colors（其实是得到了一个新的数组，并不是在原数组上进行删除操作），一定程度上也算是达到了删除特定元素的目的。<p><strong>7.prototype原型方法</strong></p><p>可以通过在Array的原型上添加方法来达到删除的目的。</p><div class="cnblogs_code"><pre class="">Array.prototype.remove = function(dx) {　　if(isNaN(dx) || dx &gt; this.length){　　　　return false;　　}<p>　　for(var i = 0, n = 0; i &lt; this.length; i++) {<br>　　　　if(this[i] != this[dx]) {<br>　　　　　　this[n++] = this[i];<br>　　　　}<br>　　}<br>　　this.length -= 1;<br>};</p><p>var colors = [“red”, “blue”, “grey”];<br>colors.remove(1);</p><p>console.log(colors); // [“red”, “grey”]</pre></p></div>这种方法其实就是自己实现一个删除的逻辑，然后把删除方法添加给了Array的原型对象，则在此环境中的所有Array对象都可以使用该方法。尽管可以这么做，但是不推荐在产品化的程序中修改原生对象的原型。道理很简单，如果只是某个实现中缺少某个方法，就在原生对象的原型中添加这个方法，那么当在另一个支持该方法的实现中运行代码时，就可能导致命名冲突。而且这样做可能会意外地导致原生方法被重写。<h1></h1>]]></content>
+        <content type="html"><![CDATA[<h2>数组属性</h2><div class="table-wrapper"><table style="height: 180px;" border="0" width="402" cellspacing="0" cellpadding="0"><tbody><tr><td valign="top" width="21%"><p align="left">属性</p></td><td valign="top" width="78%"><p align="left">描述</p></td></tr><tr><td valign="top" width="21%"><p align="left"><a href="http://www.w3school.com.cn/jsref/jsref_constructor_array.asp">constructor</a></p></td><td valign="top" width="78%"><p align="left">返回对创建此对象的数组函数的引用。</p></td></tr><tr><td valign="top" width="21%"><p align="left"><a href="http://www.w3school.com.cn/jsref/jsref_length_array.asp">length</a></p></td><td valign="top" width="78%"><p align="left">设置或返回数组中元素的数目。</p></td></tr><tr><td valign="top" width="21%"><p align="left"><a href="http://www.w3school.com.cn/jsref/jsref_prototype_array.asp">prototype</a></p></td><td valign="top" width="78%"><p align="left">使您有能力向对象添加属性和方法。</p></td></tr></tbody></table></div><span id="more"></span><h2><strong>一、创建数组并给数组元素赋值</strong></h2><strong>1.常规方式</strong><pre class="lang:js decode:true">var myCars = new Array();myCars[0] = "Saab";myCars[1] = "Volvo";myCars[2] = "BMW";</pre><strong>2.简洁方式-直接实例化</strong><pre class="lang:default decode:true ">var myCars = new Array("Saab","Volvo","BMW");</pre><strong>3.字面-隐式创建</strong><pre class="lang:default decode:true ">var myCars = ["Saab","Volvo","BMW"];</pre><h2><strong>二、清空数组元素</strong></h2><pre class="lang:default decode:true">var ary = [1,2,3,4]; ary.splice(0,ary.length);//清空数组 console.log(ary); // 输出 []，空数组，即被清空了</pre><h2><strong>三、删除数组元素</strong></h2><strong>1.length属性</strong><p>JavaScript中Array的length属性非常有特点一一它不是只读的。因此，可以通过设置这个属性来达到从数组的末尾移除项或添加新项的目的。</p><div class="cnblogs_code"><pre class>var colors = ["red", "blue", "grey"]; // 创建一个包含3个字符串的数组colors.length = 2;<p>console.log(colors[2]); // undefined</p></pre><p></p></div><strong>2.delete方法</strong><p>JavaScript提供了一个delete关键字用来删除（清除）数组元素。</p><p>要注意的是，使用delete删除元素之后数组长度不变，只是被删除元素被置为undefined了。</p><pre class="lang:default decode:true ">var colors = ["red", "blue", "grey", "green"];delete colors[0];console.log(colors); // [undefined, "blue", "grey", "green"]</pre><p class><strong>3.pop()栈方法</strong></p>JavaScript中的Array对象提供了一个pop()栈方法用于弹出并返回数组中的最后一项，某种程度上可以当做删除用。<p>栈数据结构的访问规则是FILO（First In Last Out，先进后出），栈操作在栈顶添加项，从栈顶移除项，使用pop()方法，它能移除数组中的最后一项并返回该项，并且数组的长度减1。</p><pre class>var colors = ["red", "blue", "grey"];var color = colors.pop();console.log(color); // "grey"console.log(colors.length); // 2</pre><p>可以看出，在调用pop()方法时，数组返回最后一项，即”grey”，数组的元素也仅剩两项。</p><p><strong>4.shift()队列方法</strong></p><p>JavaScript中的Array对象提供了一个shift()队列方法用于弹出并返回数组中的第一项，某种程度上也可以当做删除用。</p><p>队列数据结构的访问规则是FIFO（First In First Out，先进先出），队列在列表的末端添加项，从列表的前端移除项，使用shift()方法，它能够移除数组中的第一个项并返回该项，并且数组的长度减1。</p><pre class>var colors = ["red", "blue", "grey"];var color = colors.shift();console.log(color); // "red"console.log(colors.length); // 2</pre><p>可以看出，在调用shift()方法时，数组返回第一项，即”red”，数组的元素也仅剩两项。</p><p><strong>5.splice()操作方法 </strong></p><p>在JavaScript的Array对象中提供了一个splice()方法用于对数组进行特定的操作。splice()恐怕要算最强大的数组方法了，他的用法有很多种，在此只介绍删除数组元素的方法。在删除数组元素的时候，它可以删除任意数量的项，只需要指定2个参数：要删除的第一项的位置和要删除的项数。</p><div class="cnblogs_code"><pre>var colors = ["red", "blue", "grey"];var color = colors.splice(0, 1);<p>console.log(color); // “red”<br>console.log(colors); // [“blue”, “grey”]</p></pre><p></p></div>可以看出，在调用了splice(0, 1)方法时，数组从第一项开始，删除了一项。<p><strong>6.迭代方法</strong></p><p>所谓的迭代方法就是用循环迭代数组元素，发现符合要删除的项则删除。用的最多的地方，可能是当数组中的元素为对象的时候，可以根据对象的某个属性（例如ID）来删除数组元素。</p><p>第一种用最常见的ForEach循环来对比元素找到之后将其删除。</p><div class="cnblogs_code"><pre class>var colors = ["red", "blue", "grey"];<p>colors.forEach(function(item, index, arr) {<br>    if(item === “red”) {<br>        arr.splice(index, 1);<br>    }<br>});</p></pre><p></p></div>可以看到这里还要配合splice()方法去实现删除，循环只是为了找到特定的元素。另外一种思路是循环将不需要删除的元素推入到新的数组中，也能达到假性删除特定元素的目的。<p>第二种我们用循环中的filter方法。</p><div class="cnblogs_code"><pre class>var colors = ["red", "blue", "grey"];<p>colors = colors.filter(function(item) {<br>    return item != “red”<br>});</p><p>console.log(colors); // [“blue”, “grey”]</p></pre><p></p></div>代码很简单，找出元素不是red的项数返回给colors（其实是得到了一个新的数组，并不是在原数组上进行删除操作），一定程度上也算是达到了删除特定元素的目的。<p><strong>7.prototype原型方法</strong></p><p>可以通过在Array的原型上添加方法来达到删除的目的。</p><div class="cnblogs_code"><pre class>Array.prototype.remove = function(dx) {　　if(isNaN(dx) || dx &gt; this.length){　　　　return false;　　}<p>　　for(var i = 0, n = 0; i &lt; this.length; i++) {<br>　　　　if(this[i] != this[dx]) {<br>　　　　　　this[n++] = this[i];<br>　　　　}<br>　　}<br>　　this.length -= 1;<br>};</p><p>var colors = [“red”, “blue”, “grey”];<br>colors.remove(1);</p><p>console.log(colors); // [“red”, “grey”]</p></pre><p></p></div>这种方法其实就是自己实现一个删除的逻辑，然后把删除方法添加给了Array的原型对象，则在此环境中的所有Array对象都可以使用该方法。尽管可以这么做，但是不推荐在产品化的程序中修改原生对象的原型。道理很简单，如果只是某个实现中缺少某个方法，就在原生对象的原型中添加这个方法，那么当在另一个支持该方法的实现中运行代码时，就可能导致命名冲突。而且这样做可能会意外地导致原生方法被重写。<h1></h1>]]></content>
       
       
       <categories>
@@ -104,7 +223,7 @@
       <link href="/post/cc41aa37.html"/>
       <url>/post/cc41aa37.html</url>
       
-        <content type="html"><![CDATA[<p>处理方法：<br><strong>1.关闭mysql的服务，点击最左上的苹果图标在系统偏好设置中，找到mysql，点击，stop</strong></p><p><strong>2.进入终端</strong></p><p>进入mysql目录</p><pre class="">cd /usr/local/mysql/bin/</pre><span id="more"></span><p>获取管理员权限</p><pre class="lang:default decode:true ">sudo su</pre><p>禁止mysql验证功能，mysql会自动重启，偏好设置中的mysql状态会变成running</p><pre class="lang:default decode:true ">./mysqld_safe --skip-grant-tables &amp;</pre><p><strong>3.新建一个终端窗口(cmd+T),</strong><br>输入命令：</p><pre class="">sudo /usr/local/mysql/bin/mysql -u root -p</pre><p>然后输入自己电脑密码和mysql密码。</p>]]></content>
+        <content type="html"><![CDATA[<p>处理方法：<br><strong>1.关闭mysql的服务，点击最左上的苹果图标在系统偏好设置中，找到mysql，点击，stop</strong></p><p><strong>2.进入终端</strong></p><p>进入mysql目录</p><pre class>cd /usr/local/mysql/bin/</pre><span id="more"></span><p>获取管理员权限</p><pre class="lang:default decode:true ">sudo su</pre><p>禁止mysql验证功能，mysql会自动重启，偏好设置中的mysql状态会变成running</p><pre class="lang:default decode:true ">./mysqld_safe --skip-grant-tables &amp;</pre><p><strong>3.新建一个终端窗口(cmd+T),</strong><br>输入命令：</p><pre class>sudo /usr/local/mysql/bin/mysql -u root -p</pre><p>然后输入自己电脑密码和mysql密码。</p>]]></content>
       
       
       <categories>
@@ -223,7 +342,7 @@
       <link href="/post/a1fb3e72.html"/>
       <url>/post/a1fb3e72.html</url>
       
-        <content type="html"><![CDATA[<p>Docker从1.13版本之后采用时间线的方式作为版本号，分为社区版CE和企业版EE。</p><p>社区版是免费提供给个人开发者和小型团体使用的，企业版会提供额外的收费服务，比如经过官方测试认证过的基础设施、容器、插件等。</p><p>社区版按照stable和edge两种方式发布，每个季度更新stable版本，如17.06，17.09；每个月份更新edge版本，如17.09，17.10。</p><span id="more"></span><p> 一、安装docker</p><p>1、Docker 要求 CentOS 系统的内核版本高于 3.10 ，查看本页面的前提条件来验证你的CentOS 版本是否支持 Docker 。</p><p>通过 uname -r 命令查看你当前的内核版本</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname -r</span><br></pre></td></tr></table></figure><p>2、使用 root 权限登录 Centos。确保 yum 包更新到最新。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum update</span><br></pre></td></tr></table></figure><p>3、卸载旧版本(如果安装过旧版本的话)</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum remove docker  docker-common docker-selinux docker-engine</span><br></pre></td></tr></table></figure><p>4、安装需要的软件包， yum-util 提供yum-config-manager功能，另外两个是devicemapper驱动依赖的</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y yum-utils device-mapper-persistent-data lvm2</span><br></pre></td></tr></table></figure><p>5、设置yum源</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure><p>6、可以查看所有仓库中所有docker版本，并选择特定版本安装</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum list docker-ce --showduplicates | sort -r</span><br></pre></td></tr></table></figure><p>7、安装docker</p><p>sudo yum install docker-ce  #由于repo中默认只开启stable仓库，故这里安装的是最新稳定版17.12.0<br>sudo yum install <FQPN>  # 例如：sudo yum install docker-ce-17.12.0.ce</p><p>8、启动并加入开机启动</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start docker</span><br><span class="line">sudo systemctl enable docker</span><br></pre></td></tr></table></figure><p>9、验证安装是否成功(有client和service两部分表示docker安装启动都成功了)</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker version</span><br></pre></td></tr></table></figure><p>二、问题</p><p>1、因为之前已经安装过旧版本的docker，在安装的时候报错如下：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Transaction check error:</span><br><span class="line">  file /usr/bin/docker from install of docker-ce-17.12.0.ce-1.el7.centos.x86_64 conflicts with file from package docker-common-2:1.12.6-68.gitec8512b.el7.centos.x86_64</span><br><span class="line">  file /usr/bin/docker-containerd from install of docker-ce-17.12.0.ce-1.el7.centos.x86_64 conflicts with file from package docker-common-2:1.12.6-68.gitec8512b.el7.centos.x86_64</span><br><span class="line">  file /usr/bin/docker-containerd-shim from install of docker-ce-17.12.0.ce-1.el7.centos.x86_64 conflicts with file from package docker-common-2:1.12.6-68.gitec8512b.el7.centos.x86_64</span><br><span class="line">  file /usr/bin/dockerd from install of docker-ce-17.12.0.ce-1.el7.centos.x86_64 conflicts with file from package docker-common-2:1.12.6-68.gitec8512b.el7.centos.x86_64</span><br></pre></td></tr></table></figure><p>2、卸载旧版本的包</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum erase docker-common-2:1.12.6-68.gitec8512b.el7.centos.x86_64</span><br></pre></td></tr></table></figure><p>3、再次安装docker</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install docker-ce</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<p>Docker从1.13版本之后采用时间线的方式作为版本号，分为社区版CE和企业版EE。</p><p>社区版是免费提供给个人开发者和小型团体使用的，企业版会提供额外的收费服务，比如经过官方测试认证过的基础设施、容器、插件等。</p><p>社区版按照stable和edge两种方式发布，每个季度更新stable版本，如17.06，17.09；每个月份更新edge版本，如17.09，17.10。</p><span id="more"></span><p> 一、安装docker</p><p>1、Docker 要求 CentOS 系统的内核版本高于 3.10 ，查看本页面的前提条件来验证你的CentOS 版本是否支持 Docker 。</p><p>通过 uname -r 命令查看你当前的内核版本</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname -r</span><br></pre></td></tr></table></figure><p>2、使用 root 权限登录 Centos。确保 yum 包更新到最新。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum update</span><br></pre></td></tr></table></figure><p>3、卸载旧版本(如果安装过旧版本的话)</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum remove docker  docker-common docker-selinux docker-engine</span><br></pre></td></tr></table></figure><p>4、安装需要的软件包， yum-util 提供yum-config-manager功能，另外两个是devicemapper驱动依赖的</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y yum-utils device-mapper-persistent-data lvm2</span><br></pre></td></tr></table></figure><p>5、设置yum源</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure><p>6、可以查看所有仓库中所有docker版本，并选择特定版本安装</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum list docker-ce --showduplicates | sort -r</span><br></pre></td></tr></table></figure><p>7、安装docker</p><p>sudo yum install docker-ce  #由于repo中默认只开启stable仓库，故这里安装的是最新稳定版17.12.0<br>sudo yum install <FQPN>  # 例如：sudo yum install docker-ce-17.12.0.ce</FQPN></p><p>8、启动并加入开机启动</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start docker</span><br><span class="line">sudo systemctl enable docker</span><br></pre></td></tr></table></figure><p>9、验证安装是否成功(有client和service两部分表示docker安装启动都成功了)</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker version</span><br></pre></td></tr></table></figure><p>二、问题</p><p>1、因为之前已经安装过旧版本的docker，在安装的时候报错如下：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Transaction check error:</span><br><span class="line">  file /usr/bin/docker from install of docker-ce-17.12.0.ce-1.el7.centos.x86_64 conflicts with file from package docker-common-2:1.12.6-68.gitec8512b.el7.centos.x86_64</span><br><span class="line">  file /usr/bin/docker-containerd from install of docker-ce-17.12.0.ce-1.el7.centos.x86_64 conflicts with file from package docker-common-2:1.12.6-68.gitec8512b.el7.centos.x86_64</span><br><span class="line">  file /usr/bin/docker-containerd-shim from install of docker-ce-17.12.0.ce-1.el7.centos.x86_64 conflicts with file from package docker-common-2:1.12.6-68.gitec8512b.el7.centos.x86_64</span><br><span class="line">  file /usr/bin/dockerd from install of docker-ce-17.12.0.ce-1.el7.centos.x86_64 conflicts with file from package docker-common-2:1.12.6-68.gitec8512b.el7.centos.x86_64</span><br></pre></td></tr></table></figure><p>2、卸载旧版本的包</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum erase docker-common-2:1.12.6-68.gitec8512b.el7.centos.x86_64</span><br></pre></td></tr></table></figure><p>3、再次安装docker</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install docker-ce</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
