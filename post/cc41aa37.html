@@ -402,7 +402,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    127
+                    138
                 </div>
                 
 
@@ -435,14 +435,17 @@
                 <p>处理方法：<br><strong>1.关闭mysql的服务，点击最左上的苹果图标在系统偏好设置中，找到mysql，点击，stop</strong></p>
 <p><strong>2.进入终端</strong></p>
 <p>进入mysql目录</p>
-<pre class>cd /usr/local/mysql/bin/</pre>
-<span id="more"></span>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">cd &#x2F;usr&#x2F;local&#x2F;mysql&#x2F;bin&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>获取管理员权限</p>
-<pre class="lang:default decode:true ">sudo su</pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo su<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>禁止mysql验证功能，mysql会自动重启，偏好设置中的mysql状态会变成running</p>
-<pre class="lang:default decode:true ">./mysqld_safe --skip-grant-tables &amp;</pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">.&#x2F;mysqld_safe --skip-grant-tables &amp;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p><strong>3.新建一个终端窗口(cmd+T),</strong><br>输入命令：</p>
-<pre class>sudo /usr/local/mysql/bin/mysql -u root -p</pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo &#x2F;usr&#x2F;local&#x2F;mysql&#x2F;bin&#x2F;mysql -u root -p<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>然后输入自己电脑密码和mysql密码。</p>
 
                 
