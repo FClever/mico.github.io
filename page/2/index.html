@@ -106,28 +106,6 @@
     
   </li>
   
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/contact" class="waves-effect waves-light">
-      
-      <i class="fas fa-comments" style="zoom: 0.6;"></i>
-      
-      <span>留言板</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/friends" class="waves-effect waves-light">
-      
-      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
-      
-      <span>友情链接</span>
-    </a>
-    
-  </li>
-  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
@@ -209,28 +187,6 @@
           
         </li>
         
-        <li class="m-nav-item">
-	  
-		<a href="/contact" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-comments"></i>
-			
-			留言板
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/friends" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-address-book"></i>
-			
-			友情链接
-		</a>
-          
-        </li>
-        
         
     </ul>
 </div>
@@ -285,6 +241,129 @@
     <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
         <div class="row article-row">
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/post/4368037d.html">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="鼠标箭头变为手型，移出后再变为原型">
+                            
+                            <span class="card-title">鼠标箭头变为手型，移出后再变为原型</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                html 中如何让鼠标箭头移到某个区域(div,input,a等标签)上就变为手型，移出后再变为原型
+在区域的样式上添加：
+style="cursor:pointer;"
+
+样例：
+&lt;input style="cursor:point
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-07
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/CSS/">
+                            <span class="chip bg-color">CSS</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/post/cbf90742.html">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="js数组操作(创建、添加、替换、删除、清空等)">
+                            
+                            <span class="card-title">js数组操作(创建、添加、替换、删除、清空等)</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                数组属性
+
+
+属性
+描述
+
+
+
+constructor
+返回对创建此对象的数组函数的引用。
+
+
+length
+设置或返回数组中元素的数目。
+
+
+prototype
+使您有能力向对象添加属性和方法。
+
+
+一、创建数组并给数组元素赋值1.常规方
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-07
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/JavaScript/">
+                            <span class="chip bg-color">JavaScript</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
             
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
@@ -357,8 +436,12 @@
                                 处理方法：1.关闭mysql的服务，点击最左上的苹果图标在系统偏好设置中，找到mysql，点击，stop
 2.进入终端
 进入mysql目录
-cd &#x2F;usr&#x2F;local&#x2F;mysql&#x2F;bin&#x2F;
+cd /usr/local/mysql/bin/
 
+获取管理员权限
+sudo su
+
+禁止mysql
                             
                         </div>
                         <div class="publish-info">
@@ -514,7 +597,7 @@ undefined
                             
                                 一、添加EPEL和REMI存储库
 运行以下命令以添加所需的存储库：
-sudo yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch
+sudo yum -y install https:&#x2F;&#x2F;dl.fedoraproject.org&#x2F;pub&#x2F;epel&#x2F;epe
                             
                         </div>
                         <div class="publish-info">
@@ -525,8 +608,8 @@ sudo yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/PHP/" class="post-category">
-                                    PHP
+                                <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
+                                    后端
                                 </a>
                                 
                                 
@@ -534,6 +617,14 @@ sudo yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.
                         </div>
                     </div>
 
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/PHP/">
+                            <span class="chip bg-color">PHP</span>
+                        </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -737,7 +828,7 @@ function getDate(dates) &#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">7.6k</span>
+                        class="white-color">9.9k</span>
             
             
             
