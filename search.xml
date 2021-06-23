@@ -132,12 +132,6 @@
       </categories>
       
       
-        <tags>
-            
-            <tag> Redis </tag>
-            
-        </tags>
-      
     </entry>
     
     
@@ -160,8 +154,6 @@
         <tags>
             
             <tag> Docker </tag>
-            
-            <tag> Redis </tag>
             
             <tag> 安装 </tag>
             
@@ -189,8 +181,6 @@
       
       
         <tags>
-            
-            <tag> Redis </tag>
             
             <tag> 安装 </tag>
             
@@ -249,8 +239,6 @@
       
       
         <tags>
-            
-            <tag> Redis </tag>
             
             <tag> 安装 </tag>
             
