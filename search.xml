@@ -22,6 +22,8 @@
             
             <tag> Java </tag>
             
+            <tag> Thread </tag>
+            
             <tag> 多线程 </tag>
             
             <tag> 通信 </tag>
@@ -132,7 +134,7 @@
       
         <tags>
             
-            <tag> redis </tag>
+            <tag> Redis </tag>
             
         </tags>
       
@@ -248,7 +250,7 @@
             
             <tag> 单机 </tag>
             
-            <tag> windows </tag>
+            <tag> Windows </tag>
             
         </tags>
       
