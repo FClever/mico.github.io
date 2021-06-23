@@ -106,6 +106,31 @@
     
   </li>
   
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>更多</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a target="_blank" rel="noopener" href="http://home.tmico.cn/kodbox">
+          
+          <i class="fas fa-file" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>存储</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
@@ -184,6 +209,31 @@
 			
 			关于
 		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			更多
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="http://home.tmico.cn/kodbox " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-file" style="position: absolute;left:50px" ></i>
+			      
+		          <span>存储</span>
+                  </a>
+                </li>
+              
+            </ul>
           
         </li>
         
@@ -412,10 +462,10 @@
 <p><img src="/post/a01b8af8/3.jpg"></p>
 <h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>这时候另启一个命令窗口，原来的不要关闭，不然就无法访问服务端了。</p>
 <p>切换到 redis 目录下运行:</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">redis-cli.exe -h <span class="token number">127.0</span>.0.1 -p <span class="token number">6379</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">redis-cli.exe -h 127.0.0.1 -p 6379<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>设置键值对:</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token builtin class-name">set</span> myKey abc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">set myKey abc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>取出键值对:</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">get myKey<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -967,7 +1017,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">9.9k</span>
+                        class="white-color">10k</span>
             
             
             

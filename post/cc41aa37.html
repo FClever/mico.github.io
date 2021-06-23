@@ -106,6 +106,31 @@
     
   </li>
   
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>更多</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a target="_blank" rel="noopener" href="http://home.tmico.cn/kodbox">
+          
+          <i class="fas fa-file" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>存储</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
@@ -184,6 +209,31 @@
 			
 			关于
 		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			更多
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="http://home.tmico.cn/kodbox " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-file" style="position: absolute;left:50px" ></i>
+			      
+		          <span>存储</span>
+                  </a>
+                </li>
+              
+            </ul>
           
         </li>
         
@@ -358,7 +408,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    127
+                    138
                 </div>
                 
 
@@ -391,16 +441,16 @@
                 <p>处理方法：<br><strong>1.关闭mysql的服务，点击最左上的苹果图标在系统偏好设置中，找到mysql，点击，stop</strong></p>
 <p><strong>2.进入终端</strong></p>
 <p>进入mysql目录</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token builtin class-name">cd</span> /usr/local/mysql/bin/<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">cd &#x2F;usr&#x2F;local&#x2F;mysql&#x2F;bin&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>获取管理员权限</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sudo</span> <span class="token function">su</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo su<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>禁止mysql验证功能，mysql会自动重启，偏好设置中的mysql状态会变成running</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">./mysqld_safe --skip-grant-tables <span class="token operator">&amp;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">.&#x2F;mysqld_safe --skip-grant-tables &amp;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><strong>3.新建一个终端窗口(cmd+T),</strong><br>输入命令：</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sudo</span> /usr/local/mysql/bin/mysql -u root -p<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo &#x2F;usr&#x2F;local&#x2F;mysql&#x2F;bin&#x2F;mysql -u root -p<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>然后输入自己电脑密码和mysql密码。</p>
 
@@ -938,7 +988,7 @@ Welcome to the MySQL monitor.  Commands end with ; or \g.
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">9.9k</span>
+                        class="white-color">10k</span>
             
             
             
