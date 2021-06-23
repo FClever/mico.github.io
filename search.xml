@@ -20,8 +20,6 @@
       
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> Thread </tag>
             
             <tag> 多线程 </tag>
@@ -51,8 +49,6 @@
       
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> 线程 </tag>
             
         </tags>
@@ -77,8 +73,6 @@
       
       
         <tags>
-            
-            <tag> Java </tag>
             
             <tag> String </tag>
             
@@ -106,8 +100,6 @@
       
       
         <tags>
-            
-            <tag> Java </tag>
             
             <tag> Mybatis </tag>
             
@@ -272,6 +264,12 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
       
     </entry>
     
