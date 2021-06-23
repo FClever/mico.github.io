@@ -161,6 +161,8 @@
             
             <tag> Docker </tag>
             
+            <tag> Redis </tag>
+            
             <tag> 安装 </tag>
             
             <tag> 单机 </tag>
@@ -187,6 +189,8 @@
       
       
         <tags>
+            
+            <tag> Redis </tag>
             
             <tag> 安装 </tag>
             
@@ -246,11 +250,13 @@
       
         <tags>
             
+            <tag> Redis </tag>
+            
             <tag> 安装 </tag>
             
             <tag> 单机 </tag>
             
-            <tag> Redis </tag>
+            <tag> Windows </tag>
             
         </tags>
       
