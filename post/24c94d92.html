@@ -420,14 +420,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    689
+                    629
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    3 分
                 </div>
                 
 
@@ -450,39 +450,39 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Docker-安装-Redis"><a href="#Docker-安装-Redis" class="headerlink" title="Docker 安装 Redis"></a>Docker 安装 Redis</h2><h3 id="查看可用的-Redis-版本"><a href="#查看可用的-Redis-版本" class="headerlink" title="查看可用的 Redis 版本"></a>查看可用的 Redis 版本</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[root@VM-4-9-centos ~]# docker search redis
+                <h2 id="Docker-安装-Redis"><a href="#Docker-安装-Redis" class="headerlink" title="Docker 安装 Redis"></a>Docker 安装 Redis</h2><h3 id="查看可用的-Redis-版本"><a href="#查看可用的-Redis-版本" class="headerlink" title="查看可用的 Redis 版本"></a>查看可用的 Redis 版本</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token punctuation">[</span>root@VM-4-9-centos ~<span class="token punctuation">]</span><span class="token comment"># docker search redis</span>
 INDEX       NAME                                       DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
-docker.io   docker.io&#x2F;redis                            Redis is an open source key-value store th...   9554      [OK]
-docker.io   docker.io&#x2F;bitnami&#x2F;redis                    Bitnami Redis Docker Image                      185                  [OK]
-docker.io   docker.io&#x2F;sameersbn&#x2F;redis                                                                  83                   [OK]
-docker.io   docker.io&#x2F;grokzen&#x2F;redis-cluster            Redis cluster 3.0, 3.2, 4.0, 5.0, 6.0, 6.2      78
-docker.io   docker.io&#x2F;rediscommander&#x2F;redis-commander   Alpine image for redis-commander - Redis m...   60                   [OK]
-docker.io   docker.io&#x2F;redislabs&#x2F;redisearch             Redis With the RedisSearch module pre-load...   34
-docker.io   docker.io&#x2F;redislabs&#x2F;redis                  Clustered in-memory database engine compat...   30
-docker.io   docker.io&#x2F;redislabs&#x2F;redisinsight           RedisInsight - The GUI for Redis                30
-docker.io   docker.io&#x2F;oliver006&#x2F;redis_exporter          Prometheus Exporter for Redis Metrics. Su...   26
-docker.io   docker.io&#x2F;arm32v7&#x2F;redis                    Redis is an open source key-value store th...   24
-docker.io   docker.io&#x2F;bitnami&#x2F;redis-sentinel           Bitnami Docker Image for Redis Sentinel         23                   [OK]
-docker.io   docker.io&#x2F;redislabs&#x2F;rejson                 RedisJSON - Enhanced JSON data type proces...   23
-docker.io   docker.io&#x2F;redislabs&#x2F;redisgraph             A graph database module for Redis               15                   [OK]
-docker.io   docker.io&#x2F;redislabs&#x2F;redismod               An automated build of redismod - latest Re...   13                   [OK]
-docker.io   docker.io&#x2F;arm64v8&#x2F;redis                    Redis is an open source key-value store th...   12
-docker.io   docker.io&#x2F;webhippie&#x2F;redis                  Docker images for Redis                         11                   [OK]
-docker.io   docker.io&#x2F;insready&#x2F;redis-stat              Docker image for the real-time Redis monit...   10                   [OK]
-docker.io   docker.io&#x2F;s7anley&#x2F;redis-sentinel-docker    Redis Sentinel                                  10                   [OK]
-docker.io   docker.io&#x2F;goodsmileduck&#x2F;redis-cli          redis-cli on alpine                             9                    [OK]
-docker.io   docker.io&#x2F;circleci&#x2F;redis                   CircleCI images for Redis                       7                    [OK]
-docker.io   docker.io&#x2F;centos&#x2F;redis-32-centos7          Redis in-memory data structure store, used...   5
-docker.io   docker.io&#x2F;clearlinux&#x2F;redis                 Redis key-value data structure server with...   3
-docker.io   docker.io&#x2F;tiredofit&#x2F;redis                  Redis Server w&#x2F; Zabbix monitoring and S6 O...   1                    [OK]
-docker.io   docker.io&#x2F;wodby&#x2F;redis                      Redis container image with orchestration        1                    [OK]
-docker.io   docker.io&#x2F;xetamus&#x2F;redis-resource           forked redis-resource                           0                    [OK]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+docker.io   docker.io/redis                            Redis is an <span class="token function">open</span> <span class="token builtin class-name">source</span> key-value store th<span class="token punctuation">..</span>.   <span class="token number">9554</span>      <span class="token punctuation">[</span>OK<span class="token punctuation">]</span>
+docker.io   docker.io/bitnami/redis                    Bitnami Redis Docker Image                      <span class="token number">185</span>                  <span class="token punctuation">[</span>OK<span class="token punctuation">]</span>
+docker.io   docker.io/sameersbn/redis                                                                  <span class="token number">83</span>                   <span class="token punctuation">[</span>OK<span class="token punctuation">]</span>
+docker.io   docker.io/grokzen/redis-cluster            Redis cluster <span class="token number">3.0</span>, <span class="token number">3.2</span>, <span class="token number">4.0</span>, <span class="token number">5.0</span>, <span class="token number">6.0</span>, <span class="token number">6.2</span>      <span class="token number">78</span>
+docker.io   docker.io/rediscommander/redis-commander   Alpine image <span class="token keyword">for</span> redis-commander - Redis m<span class="token punctuation">..</span>.   <span class="token number">60</span>                   <span class="token punctuation">[</span>OK<span class="token punctuation">]</span>
+docker.io   docker.io/redislabs/redisearch             Redis With the RedisSearch module pre-load<span class="token punctuation">..</span>.   <span class="token number">34</span>
+docker.io   docker.io/redislabs/redis                  Clustered in-memory database engine compat<span class="token punctuation">..</span>.   <span class="token number">30</span>
+docker.io   docker.io/redislabs/redisinsight           RedisInsight - The GUI <span class="token keyword">for</span> Redis                <span class="token number">30</span>
+docker.io   docker.io/oliver006/redis_exporter          Prometheus Exporter <span class="token keyword">for</span> Redis Metrics. Su<span class="token punctuation">..</span>.   <span class="token number">26</span>
+docker.io   docker.io/arm32v7/redis                    Redis is an <span class="token function">open</span> <span class="token builtin class-name">source</span> key-value store th<span class="token punctuation">..</span>.   <span class="token number">24</span>
+docker.io   docker.io/bitnami/redis-sentinel           Bitnami Docker Image <span class="token keyword">for</span> Redis Sentinel         <span class="token number">23</span>                   <span class="token punctuation">[</span>OK<span class="token punctuation">]</span>
+docker.io   docker.io/redislabs/rejson                 RedisJSON - Enhanced JSON data <span class="token builtin class-name">type</span> proces<span class="token punctuation">..</span>.   <span class="token number">23</span>
+docker.io   docker.io/redislabs/redisgraph             A graph database module <span class="token keyword">for</span> Redis               <span class="token number">15</span>                   <span class="token punctuation">[</span>OK<span class="token punctuation">]</span>
+docker.io   docker.io/redislabs/redismod               An automated build of redismod - latest Re<span class="token punctuation">..</span>.   <span class="token number">13</span>                   <span class="token punctuation">[</span>OK<span class="token punctuation">]</span>
+docker.io   docker.io/arm64v8/redis                    Redis is an <span class="token function">open</span> <span class="token builtin class-name">source</span> key-value store th<span class="token punctuation">..</span>.   <span class="token number">12</span>
+docker.io   docker.io/webhippie/redis                  Docker images <span class="token keyword">for</span> Redis                         <span class="token number">11</span>                   <span class="token punctuation">[</span>OK<span class="token punctuation">]</span>
+docker.io   docker.io/insready/redis-stat              Docker image <span class="token keyword">for</span> the real-time Redis monit<span class="token punctuation">..</span>.   <span class="token number">10</span>                   <span class="token punctuation">[</span>OK<span class="token punctuation">]</span>
+docker.io   docker.io/s7anley/redis-sentinel-docker    Redis Sentinel                                  <span class="token number">10</span>                   <span class="token punctuation">[</span>OK<span class="token punctuation">]</span>
+docker.io   docker.io/goodsmileduck/redis-cli          redis-cli on alpine                             <span class="token number">9</span>                    <span class="token punctuation">[</span>OK<span class="token punctuation">]</span>
+docker.io   docker.io/circleci/redis                   CircleCI images <span class="token keyword">for</span> Redis                       <span class="token number">7</span>                    <span class="token punctuation">[</span>OK<span class="token punctuation">]</span>
+docker.io   docker.io/centos/redis-32-centos7          Redis in-memory data structure store, used<span class="token punctuation">..</span>.   <span class="token number">5</span>
+docker.io   docker.io/clearlinux/redis                 Redis key-value data structure server with<span class="token punctuation">..</span>.   <span class="token number">3</span>
+docker.io   docker.io/tiredofit/redis                  Redis Server w/ Zabbix monitoring and S6 O<span class="token punctuation">..</span>.   <span class="token number">1</span>                    <span class="token punctuation">[</span>OK<span class="token punctuation">]</span>
+docker.io   docker.io/wodby/redis                      Redis container image with orchestration        <span class="token number">1</span>                    <span class="token punctuation">[</span>OK<span class="token punctuation">]</span>
+docker.io   docker.io/xetamus/redis-resource           forked redis-resource                           <span class="token number">0</span>                    <span class="token punctuation">[</span>OK<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <span id="more"></span>
 
-<h3 id="获取最新版的-Redis-镜像"><a href="#获取最新版的-Redis-镜像" class="headerlink" title="获取最新版的 Redis 镜像"></a>获取最新版的 Redis 镜像</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[root@VM-4-9-centos ~]# docker pull redis:latest
-Trying to pull repository docker.io&#x2F;library&#x2F;redis ...
-latest: Pulling from docker.io&#x2F;library&#x2F;redis
+<h3 id="获取最新版的-Redis-镜像"><a href="#获取最新版的-Redis-镜像" class="headerlink" title="获取最新版的 Redis 镜像"></a>获取最新版的 Redis 镜像</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token punctuation">[</span>root@VM-4-9-centos ~<span class="token punctuation">]</span><span class="token comment"># docker pull redis:latest</span>
+Trying to pull repository docker.io/library/redis <span class="token punctuation">..</span>.
+latest: Pulling from docker.io/library/redis
 69692152171a: Already exists
 a4a46f2fd7e0: Pull complete
 bcdf6fddc3bd: Pull complete
@@ -490,10 +490,10 @@ bcdf6fddc3bd: Pull complete
 df3e1d63cdb1: Pull complete
 fa57f005a60d: Pull complete
 Digest: sha256:7e2c6181ad5c425443b56c7c73a9cd6df24a122345847d1ea9bb86a5afc76325
-Status: Downloaded newer image for docker.io&#x2F;redis:latest<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+Status: Downloaded newer image <span class="token keyword">for</span> docker.io/redis:latest<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="查看本地镜像"><a href="#查看本地镜像" class="headerlink" title="查看本地镜像"></a>查看本地镜像</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[root@VM-4-9-centos ~]# docker images |grep redis
-docker.io&#x2F;redis                     latest              fad0ee7e917a        7 days ago          105 MB<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="查看本地镜像"><a href="#查看本地镜像" class="headerlink" title="查看本地镜像"></a>查看本地镜像</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token punctuation">[</span>root@VM-4-9-centos ~<span class="token punctuation">]</span><span class="token comment"># docker images |grep redis</span>
+docker.io/redis                     latest              fad0ee7e917a        <span class="token number">7</span> days ago          <span class="token number">105</span> MB<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <h3 id="运行容器"><a href="#运行容器" class="headerlink" title="运行容器"></a>运行容器</h3><p>使用以下命令来运行 redis 容器：</p>
 <pre class="line-numbers language-none"><code class="language-none">[root@VM-4-9-centos ~]# docker run -itd --name redis-test -p 6379:6379 redis
@@ -504,8 +504,8 @@ dffc411e699ecb26e19376c68c3d37487bf49121d344b66f146b94e11c713a38<span aria-hidde
 <li><strong>-p 6379:6379</strong>：映射容器服务的 6379 端口到宿主机的 6379 端口。外部可以直接通过宿主机ip:6379 访问到 Redis 的服务。</li>
 </ul>
 <h3 id="安装成功"><a href="#安装成功" class="headerlink" title="安装成功"></a>安装成功</h3><p>通过 <strong>docker ps</strong> 命令查看容器的运行信息：</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[root@VM-4-9-centos ~]# docker ps |grep redis
-dffc411e699e        redis                     &quot;docker-entrypoint...&quot;   4 minutes ago       Up 4 minutes        0.0.0.0:6379-&gt;6379&#x2F;tcp                         redis-test<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token punctuation">[</span>root@VM-4-9-centos ~<span class="token punctuation">]</span><span class="token comment"># docker ps |grep redis</span>
+dffc411e699e        redis                     <span class="token string">"docker-entrypoint..."</span>   <span class="token number">4</span> minutes ago       Up <span class="token number">4</span> minutes        <span class="token number">0.0</span>.0.0:6379-<span class="token operator">></span><span class="token number">6379</span>/tcp                         redis-test<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>通过 redis-cli 连接测试使用 redis 服务</p>
 <pre class="line-numbers language-none"><code class="language-none">[root@VM-4-9-centos ~]# docker exec -it redis-test &#x2F;bin&#x2F;bash
@@ -925,7 +925,7 @@ $ wget https:&#x2F;&#x2F;download.redis.io&#x2F;releases&#x2
             tocSelector: '#toc-content',
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
+            collapseDepth: Number('4'),
             headingSelector: 'h2, h3, h4'
         });
 
@@ -1072,7 +1072,7 @@ $ wget https:&#x2F;&#x2F;download.redis.io&#x2F;releases&#x2
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">10k</span>
+                        class="white-color">11.6k</span>
             
             
             
