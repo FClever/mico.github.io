@@ -859,7 +859,7 @@ toLocaleString 、toString 、valueOf：可以看作是join的特殊用法，不
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('4'),
-            headingSelector: 'h2, h3, h4'
+            headingSelector: 'h2, h3, h4, h5'
         });
 
         // modify the toc link href to support Chinese.
@@ -871,7 +871,7 @@ toLocaleString 、toString 、valueOf：可以看作是join的特殊用法，不
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h2, h3, h4, h5').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 
@@ -1005,7 +1005,7 @@ toLocaleString 、toString 、valueOf：可以看作是join的特殊用法，不
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">11.6k</span>
+                        class="white-color">12.8k</span>
             
             
             

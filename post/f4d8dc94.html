@@ -447,7 +447,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h3 id="CentOS7安装"><a href="#CentOS7安装" class="headerlink" title="CentOS7安装"></a>CentOS7安装</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">yum search net-tools
-yum <span class="token function">install</span> net-tools.x86_64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+yum install net-tools.x86_64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 
                 
@@ -841,7 +841,7 @@ yum <span class="token function">install</span> net-tools.x86_64<span aria-hidde
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('4'),
-            headingSelector: 'h2, h3, h4'
+            headingSelector: 'h2, h3, h4, h5'
         });
 
         // modify the toc link href to support Chinese.
@@ -853,7 +853,7 @@ yum <span class="token function">install</span> net-tools.x86_64<span aria-hidde
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h2, h3, h4, h5').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 
@@ -987,7 +987,7 @@ yum <span class="token function">install</span> net-tools.x86_64<span aria-hidde
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">11.6k</span>
+                        class="white-color">12.8k</span>
             
             
             

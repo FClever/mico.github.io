@@ -842,7 +842,7 @@ getQuarterMonth(&quot;e&quot;,1)  &#x2F;&#x2F;得到本季度最后一天的yyyy
                         
                             一、添加EPEL和REMI存储库
 运行以下命令以添加所需的存储库：
-sudo yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch
+sudo yum -y install https:&#x2F;&#x2F;dl.fedoraproject.org&#x2F;pub&#x2F;epel&#x2F;epe
                         
                     </div>
                     <div class="publish-info">
@@ -975,7 +975,7 @@ sudo yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('4'),
-            headingSelector: 'h2, h3, h4'
+            headingSelector: 'h2, h3, h4, h5'
         });
 
         // modify the toc link href to support Chinese.
@@ -987,7 +987,7 @@ sudo yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h2, h3, h4, h5').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 
@@ -1121,7 +1121,7 @@ sudo yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">11.6k</span>
+                        class="white-color">12.8k</span>
             
             
             
