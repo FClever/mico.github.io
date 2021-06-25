@@ -467,8 +467,7 @@
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">Thread<span class="token punctuation">.</span>State</span> WAITING<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>处于这种状态的线程不会被分配 CPU 执行时间，它们要等待被显式地唤醒，否则会处于无限期等待的状态。</p>
-<p><strong>5. 超时等待 - TIMED_WAITING</strong></p>
-<p>声明：</p>
+<h3 id="5-超时等待-TIMED-WAITING"><a href="#5-超时等待-TIMED-WAITING" class="headerlink" title="5. 超时等待 - TIMED_WAITING"></a>5. 超时等待 - TIMED_WAITING</h3><p>声明：</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">Thread<span class="token punctuation">.</span>State</span> TIMED_WAITING<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>处于这种状态的线程不会被分配 CPU 执行时间，不过无须无限期等待被其他线程显示地唤醒，在达到一定时间后它们会自动唤醒。</p>
