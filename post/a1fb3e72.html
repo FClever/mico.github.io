@@ -250,6 +250,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -374,6 +387,14 @@
                     
                     <div class="article-tag">
                         
+                            <a href="/tags/Centos/">
+                                <span class="chip bg-color">Centos</span>
+                            </a>
+                        
+                            <a href="/tags/Linux/">
+                                <span class="chip bg-color">Linux</span>
+                            </a>
+                        
                             <a href="/tags/Docker/">
                                 <span class="chip bg-color">Docker</span>
                             </a>
@@ -386,8 +407,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Docker/" class="post-category">
-                                Docker
+                            <a href="/categories/%E8%BF%90%E7%BB%B4/" class="post-category">
+                                运维
                             </a>
                         
                     </div>
@@ -408,7 +429,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    635
+                    618
                 </div>
                 
 
@@ -445,35 +466,35 @@
 <p> 一、安装docker</p>
 <p>1、Docker 要求 CentOS 系统的内核版本高于 3.10 ，查看本页面的前提条件来验证你的CentOS 版本是否支持 Docker 。</p>
 <p>通过 uname -r 命令查看你当前的内核版本</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">uname -r<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">uname</span> -r<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>2、使用 root 权限登录 Centos。确保 yum 包更新到最新。</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo yum update<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sudo</span> yum update<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>3、卸载旧版本(如果安装过旧版本的话)</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo yum remove docker  docker-common docker-selinux docker-engine<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sudo</span> yum remove docker  docker-common docker-selinux docker-engine<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>4、安装需要的软件包， yum-util 提供yum-config-manager功能，另外两个是devicemapper驱动依赖的</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo yum install -y yum-utils device-mapper-persistent-data lvm2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sudo</span> yum <span class="token function">install</span> -y yum-utils device-mapper-persistent-data lvm2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>5、设置yum源</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo yum-config-manager --add-repo https:&#x2F;&#x2F;download.docker.com&#x2F;linux&#x2F;centos&#x2F;docker-ce.repo<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sudo</span> yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>6、可以查看所有仓库中所有docker版本，并选择特定版本安装</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">yum list docker-ce --showduplicates | sort -r<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">yum list docker-ce --showduplicates <span class="token operator">|</span> <span class="token function">sort</span> -r<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>7、安装docker</p>
 <p>sudo yum install docker-ce  #由于repo中默认只开启stable仓库，故这里安装的是最新稳定版17.12.0<br>sudo yum install <FQPN>  # 例如：sudo yum install docker-ce-17.12.0.ce</FQPN></p>
 <p>8、启动并加入开机启动</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo systemctl start docker
-sudo systemctl enable docker<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sudo</span> systemctl start docker
+<span class="token function">sudo</span> systemctl <span class="token builtin class-name">enable</span> docker<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>9、验证安装是否成功(有client和service两部分表示docker安装启动都成功了)</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">docker version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>二、问题</p>
 <p>1、因为之前已经安装过旧版本的docker，在安装的时候报错如下：</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">Transaction check error:
-  file &#x2F;usr&#x2F;bin&#x2F;docker from install of docker-ce-17.12.0.ce-1.el7.centos.x86_64 conflicts with file from package docker-common-2:1.12.6-68.gitec8512b.el7.centos.x86_64
-  file &#x2F;usr&#x2F;bin&#x2F;docker-containerd from install of docker-ce-17.12.0.ce-1.el7.centos.x86_64 conflicts with file from package docker-common-2:1.12.6-68.gitec8512b.el7.centos.x86_64
-  file &#x2F;usr&#x2F;bin&#x2F;docker-containerd-shim from install of docker-ce-17.12.0.ce-1.el7.centos.x86_64 conflicts with file from package docker-common-2:1.12.6-68.gitec8512b.el7.centos.x86_64
-  file &#x2F;usr&#x2F;bin&#x2F;dockerd from install of docker-ce-17.12.0.ce-1.el7.centos.x86_64 conflicts with file from package docker-common-2:1.12.6-68.gitec8512b.el7.centos.x86_64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+  <span class="token function">file</span> /usr/bin/docker from <span class="token function">install</span> of docker-ce-17.12.0.ce-1.el7.centos.x86_64 conflicts with <span class="token function">file</span> from package docker-common-2:1.12.6-68.gitec8512b.el7.centos.x86_64
+  <span class="token function">file</span> /usr/bin/docker-containerd from <span class="token function">install</span> of docker-ce-17.12.0.ce-1.el7.centos.x86_64 conflicts with <span class="token function">file</span> from package docker-common-2:1.12.6-68.gitec8512b.el7.centos.x86_64
+  <span class="token function">file</span> /usr/bin/docker-containerd-shim from <span class="token function">install</span> of docker-ce-17.12.0.ce-1.el7.centos.x86_64 conflicts with <span class="token function">file</span> from package docker-common-2:1.12.6-68.gitec8512b.el7.centos.x86_64
+  <span class="token function">file</span> /usr/bin/dockerd from <span class="token function">install</span> of docker-ce-17.12.0.ce-1.el7.centos.x86_64 conflicts with <span class="token function">file</span> from package docker-common-2:1.12.6-68.gitec8512b.el7.centos.x86_64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>2、卸载旧版本的包</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo yum erase docker-common-2:1.12.6-68.gitec8512b.el7.centos.x86_64<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sudo</span> yum erase docker-common-2:1.12.6-68.gitec8512b.el7.centos.x86_64<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>3、再次安装docker</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo yum install docker-ce<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sudo</span> yum <span class="token function">install</span> docker-ce<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -536,6 +557,14 @@ sudo systemctl enable docker<span aria-hidden="true" class="line-numbers-rows"><
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
+                            
+                                <a href="/tags/Centos/">
+                                    <span class="chip bg-color">Centos</span>
+                                </a>
+                            
+                                <a href="/tags/Linux/">
+                                    <span class="chip bg-color">Linux</span>
+                                </a>
                             
                                 <a href="/tags/Docker/">
                                     <span class="chip bg-color">Docker</span>
@@ -755,6 +784,10 @@ function getDate(dates) &#123;
                         <span class="chip bg-color">JavaScript</span>
                     </a>
                     
+                    <a href="/tags/%E6%97%A5%E6%9C%9F/">
+                        <span class="chip bg-color">日期</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -791,8 +824,8 @@ function getDate(dates) &#123;
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Docker/" class="post-category">
-                                    Docker
+                            <a href="/categories/%E8%BF%90%E7%BB%B4/" class="post-category">
+                                    运维
                                 </a>
                             
                             
@@ -802,6 +835,14 @@ function getDate(dates) &#123;
 
                 
                 <div class="card-action article-tags">
+                    
+                    <a href="/tags/Centos/">
+                        <span class="chip bg-color">Centos</span>
+                    </a>
+                    
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
                     
                     <a href="/tags/Docker/">
                         <span class="chip bg-color">Docker</span>
@@ -1009,7 +1050,7 @@ function getDate(dates) &#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">15.8k</span>
+                        class="white-color">17.7k</span>
             
             
             

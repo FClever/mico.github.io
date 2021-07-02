@@ -250,6 +250,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -394,7 +407,7 @@
                                 Python
                             </a>
                         
-                            <a href="/categories/Python/%E7%AE%97%E6%B3%95/" class="post-category">
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
                                 算法
                             </a>
                         
@@ -476,16 +489,16 @@
 arr <span class="token operator">=</span> bubbleSort<span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>输出结果：</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[2, 10, 7, 4, 5]
-[2, 7, 10, 4, 5]
-[2, 7, 4, 10, 5]
-[2, 7, 4, 5, 10]
-[2, 7, 4, 5, 10]
-[2, 4, 7, 5, 10]
-[2, 4, 5, 7, 10]
-[2, 4, 5, 7, 10]
-[2, 4, 5, 7, 10]
-[2, 4, 5, 7, 10]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token punctuation">[</span><span class="token number">2</span>, <span class="token number">10</span>, <span class="token number">7</span>, <span class="token number">4</span>, <span class="token number">5</span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token number">2</span>, <span class="token number">7</span>, <span class="token number">10</span>, <span class="token number">4</span>, <span class="token number">5</span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token number">2</span>, <span class="token number">7</span>, <span class="token number">4</span>, <span class="token number">10</span>, <span class="token number">5</span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token number">2</span>, <span class="token number">7</span>, <span class="token number">4</span>, <span class="token number">5</span>, <span class="token number">10</span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token number">2</span>, <span class="token number">7</span>, <span class="token number">4</span>, <span class="token number">5</span>, <span class="token number">10</span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token number">2</span>, <span class="token number">4</span>, <span class="token number">7</span>, <span class="token number">5</span>, <span class="token number">10</span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token number">2</span>, <span class="token number">4</span>, <span class="token number">5</span>, <span class="token number">7</span>, <span class="token number">10</span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token number">2</span>, <span class="token number">4</span>, <span class="token number">5</span>, <span class="token number">7</span>, <span class="token number">10</span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token number">2</span>, <span class="token number">4</span>, <span class="token number">5</span>, <span class="token number">7</span>, <span class="token number">10</span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token number">2</span>, <span class="token number">4</span>, <span class="token number">5</span>, <span class="token number">7</span>, <span class="token number">10</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="二-选择排序"><a href="#二-选择排序" class="headerlink" title="二.选择排序"></a>二.选择排序</h2><p>选择排序是一种简单直观的排序方法，无论什么数据进去都是O(n²)的时间复杂度。所以用到它的时候，数据规模越小越好。唯一的好处就是不占用额外的内存空间。 </p>
 <h3 id="1-算法步骤-1"><a href="#1-算法步骤-1" class="headerlink" title="1.算法步骤"></a>1.算法步骤</h3><ol>
@@ -510,10 +523,10 @@ arr <span class="token operator">=</span> bubbleSort<span class="token punctuati
 arr <span class="token operator">=</span> selectionSort<span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>输出结果：</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[2, 10, 7, 4, 5]
-[2, 4, 7, 10, 5]
-[2, 4, 5, 10, 7]
-[2, 4, 5, 7, 10]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token punctuation">[</span><span class="token number">2</span>, <span class="token number">10</span>, <span class="token number">7</span>, <span class="token number">4</span>, <span class="token number">5</span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token number">2</span>, <span class="token number">4</span>, <span class="token number">7</span>, <span class="token number">10</span>, <span class="token number">5</span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token number">2</span>, <span class="token number">4</span>, <span class="token number">5</span>, <span class="token number">10</span>, <span class="token number">7</span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token number">2</span>, <span class="token number">4</span>, <span class="token number">5</span>, <span class="token number">7</span>, <span class="token number">10</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="三-插入排序"><a href="#三-插入排序" class="headerlink" title="三.插入排序"></a>三.插入排序</h2><p>插入排序的代码实现虽然没有冒泡排序和选择排序那么简单粗暴，但它的原理应该是最容易理解的了，因为只要打过扑克牌的人都应该能够秒懂。插入排序是一种最简单直观的排序算法，它的工作原理是通过构建有序序列，对于未排序数据，在已排序序列中从后向前扫描，找到相应位置并插入。</p>
 <p>插入排序和冒泡排序一样，也有一种优化算法，叫做拆半插入。</p>
@@ -536,11 +549,11 @@ arr <span class="token operator">=</span> selectionSort<span class="token punctu
 arr <span class="token operator">=</span> insertionSort<span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>输出结果：</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[10, 2, 7, 4, 5]
-[2, 10, 7, 4, 5]
-[2, 7, 10, 4, 5]
-[2, 4, 7, 10, 5]
-[2, 4, 5, 7, 10]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token punctuation">[</span><span class="token number">10</span>, <span class="token number">2</span>, <span class="token number">7</span>, <span class="token number">4</span>, <span class="token number">5</span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token number">2</span>, <span class="token number">10</span>, <span class="token number">7</span>, <span class="token number">4</span>, <span class="token number">5</span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token number">2</span>, <span class="token number">7</span>, <span class="token number">10</span>, <span class="token number">4</span>, <span class="token number">5</span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token number">2</span>, <span class="token number">4</span>, <span class="token number">7</span>, <span class="token number">10</span>, <span class="token number">5</span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token number">2</span>, <span class="token number">4</span>, <span class="token number">5</span>, <span class="token number">7</span>, <span class="token number">10</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="四-希尔排序"><a href="#四-希尔排序" class="headerlink" title="四.希尔排序"></a>四.希尔排序</h2><p>希尔排序，也称递减增量排序算法，是插入排序的一种更高效的改进版本。但希尔排序是非稳定排序算法。</p>
 <p>希尔排序是基于插入排序的以下两点性质而提出改进方法的：</p>
@@ -575,10 +588,11 @@ arr <span class="token operator">=</span> insertionSort<span class="token punctu
 arr <span class="token operator">=</span> shellSort<span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>输出结果：</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[5, 2, 7, 4, 10]
-[2, 4, 5, 7, 10]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token punctuation">[</span><span class="token number">5</span>, <span class="token number">2</span>, <span class="token number">7</span>, <span class="token number">4</span>, <span class="token number">10</span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token number">2</span>, <span class="token number">4</span>, <span class="token number">5</span>, <span class="token number">7</span>, <span class="token number">10</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<h2 id><a href="#" class="headerlink" title></a></h2>
+<p>未完待续…</p>
+
                 
             </div>
             <hr/>
@@ -819,18 +833,17 @@ arr <span class="token operator">=</span> shellSort<span class="token punctuatio
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/post/fbe92b6a.html">
+                <a href="/post/ab6e9a9f.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="python实现十大经典算法">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="linux阿里云服务器centos8操作系统安装mysql8.0详细教程">
                         
-                        <span class="card-title">python实现十大经典算法</span>
+                        <span class="card-title">linux阿里云服务器centos8操作系统安装mysql8.0详细教程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -840,35 +853,38 @@ arr <span class="token operator">=</span> shellSort<span class="token punctuatio
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-25
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-30
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Python/" class="post-category">
-                                    Python
+                            <a href="/categories/%E8%BF%90%E7%BB%B4/" class="post-category">
+                                    运维
                                 </a>
                             
-                            <a href="/categories/Python/%E7%AE%97%E6%B3%95/" class="post-category">
-                                    算法
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
+                                    数据库
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Python/">
-                        <span class="chip bg-color">Python</span>
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
                     </a>
                     
-                    <a href="/tags/%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">算法</span>
+                    <a href="/tags/%E5%AE%89%E8%A3%85/">
+                        <span class="chip bg-color">安装</span>
+                    </a>
+                    
+                    <a href="/tags/Mysql/">
+                        <span class="chip bg-color">Mysql</span>
                     </a>
                     
                 </div>
@@ -1126,7 +1142,7 @@ arr <span class="token operator">=</span> shellSort<span class="token punctuatio
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">15.8k</span>
+                        class="white-color">17.7k</span>
             
             
             

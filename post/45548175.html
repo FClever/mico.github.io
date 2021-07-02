@@ -250,6 +250,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -376,6 +389,10 @@
                         
                             <a href="/tags/JavaScript/">
                                 <span class="chip bg-color">JavaScript</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%97%A5%E6%9C%9F/">
+                                <span class="chip bg-color">日期</span>
                             </a>
                         
                     </div>
@@ -655,6 +672,10 @@ getQuarterMonth(&quot;e&quot;,1)  &#x2F;&#x2F;得到本季度最后一天的yyyy
                                     <span class="chip bg-color">JavaScript</span>
                                 </a>
                             
+                                <a href="/tags/%E6%97%A5%E6%9C%9F/">
+                                    <span class="chip bg-color">日期</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -842,7 +863,7 @@ getQuarterMonth(&quot;e&quot;,1)  &#x2F;&#x2F;得到本季度最后一天的yyyy
                         
                             一、添加EPEL和REMI存储库
 运行以下命令以添加所需的存储库：
-sudo yum -y install https:&#x2F;&#x2F;dl.fedoraproject.org&#x2F;pub&#x2F;epel&#x2F;epe
+sudo yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch
                         
                     </div>
                     <div class="publish-info">
@@ -853,8 +874,8 @@ sudo yum -y install https:&#x2F;&#x2F;dl.fedoraproject.org&#x2F;pub&#x2F;epel&#x
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
-                                    后端
+                            <a href="/categories/%E8%BF%90%E7%BB%B4/" class="post-category">
+                                    运维
                                 </a>
                             
                             
@@ -904,8 +925,8 @@ sudo yum -y install https:&#x2F;&#x2F;dl.fedoraproject.org&#x2F;pub&#x2F;epel&#x
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Docker/" class="post-category">
-                                    Docker
+                            <a href="/categories/%E8%BF%90%E7%BB%B4/" class="post-category">
+                                    运维
                                 </a>
                             
                             
@@ -914,6 +935,14 @@ sudo yum -y install https:&#x2F;&#x2F;dl.fedoraproject.org&#x2F;pub&#x2F;epel&#x
                 </div>
                 
                 <div class="card-action article-tags">
+                    
+                    <a href="/tags/Centos/">
+                        <span class="chip bg-color">Centos</span>
+                    </a>
+                    
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
                     
                     <a href="/tags/Docker/">
                         <span class="chip bg-color">Docker</span>
@@ -1121,7 +1150,7 @@ sudo yum -y install https:&#x2F;&#x2F;dl.fedoraproject.org&#x2F;pub&#x2F;epel&#x
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">15.8k</span>
+                        class="white-color">17.7k</span>
             
             
             

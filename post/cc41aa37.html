@@ -250,6 +250,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -386,6 +399,10 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
+                            <a href="/categories/%E8%BF%90%E7%BB%B4/" class="post-category">
+                                运维
+                            </a>
+                        
                             <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
                                 数据库
                             </a>
@@ -408,7 +425,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    138
+                    127
                 </div>
                 
 
@@ -441,16 +458,16 @@
                 <p>处理方法：<br><strong>1.关闭mysql的服务，点击最左上的苹果图标在系统偏好设置中，找到mysql，点击，stop</strong></p>
 <p><strong>2.进入终端</strong></p>
 <p>进入mysql目录</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">cd &#x2F;usr&#x2F;local&#x2F;mysql&#x2F;bin&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token builtin class-name">cd</span> /usr/local/mysql/bin/<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>获取管理员权限</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo su<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sudo</span> <span class="token function">su</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>禁止mysql验证功能，mysql会自动重启，偏好设置中的mysql状态会变成running</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">.&#x2F;mysqld_safe --skip-grant-tables &amp;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">./mysqld_safe --skip-grant-tables <span class="token operator">&amp;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><strong>3.新建一个终端窗口(cmd+T),</strong><br>输入命令：</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo &#x2F;usr&#x2F;local&#x2F;mysql&#x2F;bin&#x2F;mysql -u root -p<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sudo</span> /usr/local/mysql/bin/mysql -u root -p<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>然后输入自己电脑密码和mysql密码。</p>
 
@@ -735,6 +752,10 @@
                         <span class="chip bg-color">JavaScript</span>
                     </a>
                     
+                    <a href="/tags/%E6%95%B0%E7%BB%84/">
+                        <span class="chip bg-color">数组</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -770,6 +791,10 @@ Welcome to the MySQL monitor.  Commands end with ; or \g.
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%BF%90%E7%BB%B4/" class="post-category">
+                                    运维
+                                </a>
                             
                             <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
                                     数据库
@@ -988,7 +1013,7 @@ Welcome to the MySQL monitor.  Commands end with ; or \g.
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">15.8k</span>
+                        class="white-color">17.7k</span>
             
             
             

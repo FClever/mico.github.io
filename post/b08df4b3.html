@@ -250,6 +250,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -386,8 +399,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
-                                后端
+                            <a href="/categories/%E8%BF%90%E7%BB%B4/" class="post-category">
+                                运维
                             </a>
                         
                     </div>
@@ -408,7 +421,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    271
+                    262
                 </div>
                 
 
@@ -440,26 +453,26 @@
             <div id="articleContent">
                 <p>一、添加EPEL和REMI存储库</p>
 <p>运行以下命令以添加所需的存储库：</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo yum -y install https:&#x2F;&#x2F;dl.fedoraproject.org&#x2F;pub&#x2F;epel&#x2F;epel-release-latest-7.noarch.rpm
-sudo yum -y install https:&#x2F;&#x2F;rpms.remirepo.net&#x2F;enterprise&#x2F;remi-release-7.rpm<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sudo</span> yum -y <span class="token function">install</span> https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+<span class="token function">sudo</span> yum -y <span class="token function">install</span> https://rpms.remirepo.net/enterprise/remi-release-7.rpm<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <span id="more"></span>
 <p>二、在CentOS 7上安装PHP 7.4版本</p>
 <p>我们现在可以启用PHP 7.4 Remi存储库并在CentOS 7上安装PHP 7.4：</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo yum -y install yum-utils
-sudo yum-config-manager --enable remi-php74<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sudo</span> yum -y <span class="token function">install</span> yum-utils
+<span class="token function">sudo</span> yum-config-manager --enable remi-php74<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>在CentOS 7上安装PHP 7.4：</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo yum update
-sudo yum install php php-cli<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sudo</span> yum update
+<span class="token function">sudo</span> yum <span class="token function">install</span> php php-cli<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>使用下一个命令安装其他软件包：</p>
 <p>sudo yum install php-xxx</p>
 <p>例如运行以下命令：</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo yum install php  php-cli php-fpm php-mysqlnd php-zip php-devel php-gd php-mcrypt php-mbstring php-curl php-xml php-pear php-bcmath php-json<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sudo</span> yum <span class="token function">install</span> php  php-cli php-fpm php-mysqlnd php-zip php-devel php-gd php-mcrypt php-mbstring php-curl php-xml php-pear php-bcmath php-json<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>当前的PHP版本应为7.4版，如下所示：</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">php -v
 
-PHP 7.4.0RC1 (cli) (built: Sep  3 2019 07:45:03) ( NTS )
-Copyright (c) The PHP Group
-Zend Engine v3.4.0-dev, Copyright (c) Zend Technologies<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+PHP <span class="token number">7.4</span>.0RC1 <span class="token punctuation">(</span>cli<span class="token punctuation">)</span> <span class="token punctuation">(</span>built: Sep  <span class="token number">3</span> <span class="token number">2019</span> 07:45:03<span class="token punctuation">)</span> <span class="token punctuation">(</span> NTS <span class="token punctuation">)</span>
+Copyright <span class="token punctuation">(</span>c<span class="token punctuation">)</span> The PHP Group
+Zend Engine v3.4.0-dev, Copyright <span class="token punctuation">(</span>c<span class="token punctuation">)</span> Zend Technologies<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>如果要查看启用的模块，请运行：</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">php --modules<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>至此，你已经在CentOS 7上成功安装了PHP 7.4，欢迎使用此版本进行PHP开发/测试。</p>
@@ -747,6 +760,10 @@ undefined
                         <span class="chip bg-color">JavaScript</span>
                     </a>
                     
+                    <a href="/tags/JSON/">
+                        <span class="chip bg-color">JSON</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -797,6 +814,10 @@ function getDate(dates) &#123;
                     
                     <a href="/tags/JavaScript/">
                         <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%97%A5%E6%9C%9F/">
+                        <span class="chip bg-color">日期</span>
                     </a>
                     
                 </div>
@@ -1001,7 +1022,7 @@ function getDate(dates) &#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">15.8k</span>
+                        class="white-color">17.7k</span>
             
             
             
