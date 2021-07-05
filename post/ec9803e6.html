@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="java中判断一个String字符串中包含某个字段, MICO">
+    <meta name="keywords" content="Nginx 代理 TCP协议 MySQL连接, MICO">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>java中判断一个String字符串中包含某个字段 | MICO</title>
+    <title>Nginx 代理 TCP协议 MySQL连接 | MICO</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -266,12 +266,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">java中判断一个String字符串中包含某个字段</h1>
+                    <h1 class="description center-align post-title">Nginx 代理 TCP协议 MySQL连接</h1>
                 </div>
             </div>
         </div>
@@ -387,16 +387,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Java/">
-                                <span class="chip bg-color">Java</span>
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                                <span class="chip bg-color">数据库</span>
                             </a>
                         
-                            <a href="/tags/String/">
-                                <span class="chip bg-color">String</span>
-                            </a>
-                        
-                            <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
-                                <span class="chip bg-color">字符串</span>
+                            <a href="/tags/%E4%BB%A3%E7%90%86/">
+                                <span class="chip bg-color">代理</span>
                             </a>
                         
                     </div>
@@ -407,8 +403,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
-                                后端
+                            <a href="/categories/%E8%BF%90%E7%BB%B4/" class="post-category">
+                                运维
                             </a>
                         
                     </div>
@@ -420,7 +416,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-06-16
+                    2021-07-03
                 </div>
                 
 
@@ -429,7 +425,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    312
+                    146
                 </div>
                 
 
@@ -459,48 +455,24 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-判断String字符串中包含某个字段"><a href="#1-判断String字符串中包含某个字段" class="headerlink" title="1.判断String字符串中包含某个字段"></a>1.判断String字符串中包含某个字段</h2><h3 id="1-indexOf-方法"><a href="#1-indexOf-方法" class="headerlink" title="1.indexOf()方法"></a>1.indexOf()方法</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token class-name">String</span> str <span class="token operator">=</span> <span class="token string">"~~~MICO~~~"</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> flag <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">"MICO"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>flag<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//输出：3</span>
-    <span class="token keyword">int</span> flag1 <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">"FENG"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>flag1<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//输出：-1</span>
-    <span class="token comment">//如果包含，输出这个字符串在数组中的索引（如果有重复的，则输出第一次出现的索引位置）；否则输出-1。</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <p>使用nginx代理mysql连接有个好处就是，如果做了容灾处理的话, 可以瞬间平滑切换到可用服务上。</p>
+<p>1.vi /etc/nginx/nginx.conf ,在 http{} 结构体外(也就是文件末尾)添加如下配置：</p>
+<pre class="line-numbers language-none"><code class="language-none">stream &#123;
 
+    upstream cloudsocket &#123;
+       hash $remote_addr consistent;
+       server 192.168.182.155:3306 weight&#x3D;5 max_fails&#x3D;3 fail_timeout&#x3D;30s;
+    &#125;
+    server &#123;
+       listen 3306;#数据库服务器监听端口
+       proxy_connect_timeout 10s;
+       proxy_timeout 300s;#设置客户端和代理服务之间的超时时间，如果5分钟内没操作将自动断开。
+       proxy_pass cloudsocket;
+    &#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-
-<h3 id="2-contains-方法"><a href="#2-contains-方法" class="headerlink" title="2.contains()方法"></a>2.contains()方法</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token class-name">String</span> str <span class="token operator">=</span> <span class="token string">"~~~MICO~~~"</span><span class="token punctuation">;</span>
-    <span class="token keyword">boolean</span> flag <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token string">"MICO"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>flag<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//输出：true</span>
-    <span class="token keyword">boolean</span> flag1 <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token string">"FENG"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>flag1<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//输出：false</span>
-    <span class="token comment">//如果包含，输出true；否则输出false。</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//contains()方法的底层实现还是indexOf()方法！</span>
-<span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">contains</span><span class="token punctuation">(</span><span class="token class-name">CharSequence</span> s<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-  	<span class="token keyword">return</span> <span class="token function">indexOf</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">></span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="2-判断String数组中是否包含某个字符串"><a href="#2-判断String数组中是否包含某个字符串" class="headerlink" title="2.判断String数组中是否包含某个字符串"></a>2.判断String数组中是否包含某个字符串</h2><h3 id="1-indexOf-方法-1"><a href="#1-indexOf-方法-1" class="headerlink" title="1.indexOf()方法"></a>1.indexOf()方法</h3> <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token class-name">String</span> str <span class="token operator">=</span> <span class="token string">"aa,bb,cc,dd"</span><span class="token punctuation">;</span>
-    <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> strs <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">></span></span> list <span class="token operator">=</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span>strs<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> flag <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">"cc"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>flag<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment">//如果包含，输出这个字符串在数组中的索引（比如此例输出2）；否则输出-1。</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="2-contains-方法-1"><a href="#2-contains-方法-1" class="headerlink" title="2.contains()方法"></a>2.contains()方法</h3> <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token class-name">String</span> str <span class="token operator">=</span> <span class="token string">"aa,bb,cc,dd"</span><span class="token punctuation">;</span>
-    <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> strs <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">></span></span> list <span class="token operator">=</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span>strs<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//将String数组转化为list集合</span>
-    <span class="token keyword">boolean</span> flag <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token string">"bh"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>flag<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment">//如果包含，输出true；否则输出false。</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+<p>2.systemctl restart nginx ，重启nginx。</p>
+<p></p>
 
                 
             </div>
@@ -527,7 +499,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.tmico.cn/post/19b7bc41.html">https://github.tmico.cn/post/19b7bc41.html</a>
+                    <a href="https://github.tmico.cn/post/ec9803e6.html">https://github.tmico.cn/post/ec9803e6.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -565,16 +537,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Java/">
-                                    <span class="chip bg-color">Java</span>
+                                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                                    <span class="chip bg-color">数据库</span>
                                 </a>
                             
-                                <a href="/tags/String/">
-                                    <span class="chip bg-color">String</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
-                                    <span class="chip bg-color">字符串</span>
+                                <a href="/tags/%E4%BB%A3%E7%90%86/">
+                                    <span class="chip bg-color">代理</span>
                                 </a>
                             
                         </div>
@@ -746,17 +714,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/post/9a8914a9.html">
+                <a href="/post/ec9803e6.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Java - 为什么等待和通知是在Object类而不是Thread中声明的？">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Nginx 代理 TCP协议 MySQL连接">
                         
-                        <span class="card-title">Java - 为什么等待和通知是在Object类而不是Thread中声明的？</span>
+                        <span class="card-title">Nginx 代理 TCP协议 MySQL连接</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -766,30 +735,31 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-03
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
-                                    后端
+                            <a href="/categories/%E8%BF%90%E7%BB%B4/" class="post-category">
+                                    运维
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                        <span class="chip bg-color">数据库</span>
                     </a>
                     
-                    <a href="/tags/Thread/">
-                        <span class="chip bg-color">Thread</span>
+                    <a href="/tags/%E4%BB%A3%E7%90%86/">
+                        <span class="chip bg-color">代理</span>
                     </a>
                     
                 </div>
@@ -803,13 +773,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/post/b18bb060.html">
+                <a href="/post/60810f4e.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="MyBatis简介与原理">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Oracle错误ORA-12541">
                         
-                        <span class="card-title">MyBatis简介与原理</span>
+                        <span class="card-title">Oracle错误ORA-12541</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -820,14 +790,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-02
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
-                                    后端
+                            <a href="/categories/%E8%BF%90%E7%BB%B4/" class="post-category">
+                                    运维
                                 </a>
                             
                             
@@ -837,12 +807,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/Oracle/">
+                        <span class="chip bg-color">Oracle</span>
                     </a>
                     
-                    <a href="/tags/Mybatis/">
-                        <span class="chip bg-color">Mybatis</span>
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                        <span class="chip bg-color">数据库</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%97%AE%E9%A2%98/">
+                        <span class="chip bg-color">问题</span>
                     </a>
                     
                 </div>
